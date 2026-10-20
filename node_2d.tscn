@@ -1,11 +1,78 @@
 [gd_scene format=3 uid="uid://bls2nwi65cm7k"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_y32ns"]
+[ext_resource type="Script" uid="uid://bbjcwbf71bx5u" path="res://scripts/character_body_2d.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://aaaaa (2).jpeg" id="2_0e48y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
+size = Vector2(40.5, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
+atlas = ExtResource("2_0e48y")
+region = Rect2(0, 0, 896, 1193)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_epypp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e48y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(419, 20)
 
 [node name="Node2D" type="Node2D" unique_id=1184867715]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1426942648]
+script = ExtResource("1_wtcfe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1278391515]
-position = Vector2(378, 230)
-shape = SubResource("CircleShape2D_y32ns")
+position = Vector2(397.75, 373.5)
+shape = SubResource("RectangleShape2D_epypp")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=778832896]
+texture_filter = 1
+position = Vector2(399.00003, 374)
+scale = Vector2(0.03501676, 0.021427086)
+sprite_frames = SubResource("SpriteFrames_epypp")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1607124183]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2084772643]
+position = Vector2(576.5, 406)
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="Control" type="Control" parent="." unique_id=559598693]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="dialog_box" type="MarginContainer" parent="Control" unique_id=216001814]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.893
+anchor_top = 4.834
+anchor_right = 21.87
+anchor_bottom = 13.911
+offset_left = -195.72
+offset_top = -193.36
+offset_right = -834.80005
+offset_bottom = -516.44
+
+[node name="bg_dialog_box" type="NinePatchRect" parent="Control/dialog_box" unique_id=1379850722]
+layout_mode = 2
+
+[node name="text_container" type="MarginContainer" parent="Control/dialog_box" unique_id=658027788]
+layout_mode = 2
+
+[node name="text_label" type="Label" parent="Control/dialog_box/text_container" unique_id=577349658]
+layout_mode = 2
+
+[node name="indicator" type="TextureRect" parent="Control" unique_id=1000362811]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
