@@ -5,14 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://kpyrhnjd2dmb" path="res://entidades/player.tscn" id="5_thifo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
-size = Vector2(1150.25, 12)
+size = Vector2(500.5, 31)
 
 [node name="Jogo" type="Node2D" unique_id=1184867715]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1607124183]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2084772643]
-position = Vector2(575, 94)
+position = Vector2(250.75, 184)
 shape = SubResource("RectangleShape2D_0e48y")
 
 [node name="Control" type="Control" parent="." unique_id=559598693]
@@ -58,4 +58,4 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Player" parent="." unique_id=1744638049 instance=ExtResource("5_thifo")]
-position = Vector2(17, 39)
+position = Vector2(47, 41)
