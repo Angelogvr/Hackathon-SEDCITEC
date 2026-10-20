@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bls2nwi65cm7k"]
+
+[ext_resource type="Script" uid="uid://bbjcwbf71bx5u" path="res://scripts/player_mov.gd" id="1_ex3y1"]
+[ext_resource type="Script" uid="uid://bjb32xmj6l2km" path="res://scripts/dialog_box.gd" id="3_4budo"]
+[ext_resource type="Texture2D" uid="uid://bc15jn2i0x4lp" path="res://sprites/caixa.png" id="4_4budo"]
+[ext_resource type="PackedScene" uid="uid://kpyrhnjd2dmb" path="res://entidades/player.tscn" id="5_thifo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(1146.5, 20)
+
+[node name="Jogo" type="Node2D" unique_id=1184867715]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1426942648]
+script = ExtResource("1_ex3y1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1607124183]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2084772643]
+position = Vector2(578.75, 636)
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="Control" type="Control" parent="." unique_id=559598693]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="dialog_box" type="MarginContainer" parent="Control" unique_id=216001814]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.893
+anchor_top = 4.834
+anchor_right = 21.87
+anchor_bottom = 13.911
+offset_left = -195.72
+offset_top = -193.36
+offset_right = -742.80005
+offset_bottom = -516.44
+script = ExtResource("3_4budo")
+
+[node name="bg_dialog_box" type="NinePatchRect" parent="Control/dialog_box" unique_id=1379850722]
+layout_mode = 2
+texture = ExtResource("4_4budo")
+region_rect = Rect2(97.14038, 111.26551, 2317.3618, 403.5182)
+
+[node name="text_container" type="MarginContainer" parent="Control/dialog_box" unique_id=658027788]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 14
+
+[node name="text_label" type="Label" parent="Control/dialog_box/text_container" unique_id=577349658]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="indicator" type="TextureRect" parent="Control" unique_id=1000362811]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Player" parent="." unique_id=1744638049 instance=ExtResource("5_thifo")]
+position = Vector2(50, 594)

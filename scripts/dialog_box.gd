@@ -18,6 +18,6 @@ func _ready() -> void:
 	
 	tween.tween_property(self, "scale", Vector2.ONE, 0.3).set_trans(Tween.TRANS_BACK)
 	
-	if texts_to_display.size() > 0:
-		show_text()
-```[cite: 2]
+#	if texts_to_display.size() > 0:
+	#	show_text()
+#```[cite: 2]
