@@ -122,9 +122,10 @@ shape = SubResource("CapsuleShape2D_k1af1")
 sprite_frames = SubResource("SpriteFrames_k1af1")
 animation = &"jump"
 autoplay = "idle"
-frame_progress = 0.42649224
+frame_progress = 0.48250613
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1347868137]
 limit_left = 0
+limit_right = 998
 limit_bottom = 200
 position_smoothing_enabled = true
