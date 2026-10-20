@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://sprites/spr_cenario.png" id="1_ex3y1"]
 [ext_resource type="Script" uid="uid://bjb32xmj6l2km" path="res://scripts/dialog_box.gd" id="3_4budo"]
 [ext_resource type="Texture2D" uid="uid://bc15jn2i0x4lp" path="res://sprites/caixa.png" id="4_4budo"]
+[ext_resource type="PackedScene" uid="uid://c6e8gefihjl6w" path="res://entidades/camera.tscn" id="5_3cynk"]
 [ext_resource type="PackedScene" uid="uid://kpyrhnjd2dmb" path="res://entidades/player.tscn" id="5_thifo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
@@ -80,3 +81,6 @@ offset_bottom = 40.0
 
 [node name="Player" parent="." unique_id=1744638049 instance=ExtResource("5_thifo")]
 position = Vector2(58, 115)
+
+[node name="Camera" parent="." unique_id=1173946392 instance=ExtResource("5_3cynk")]
+position = Vector2(248, 124)
