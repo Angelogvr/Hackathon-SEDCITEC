@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bls2nwi65cm7k"]
 
 [ext_resource type="Script" uid="uid://bbjcwbf71bx5u" path="res://scripts/character_body_2d.gd" id="1_wtcfe"]
-[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://aaaaa (2).jpeg" id="2_0e48y"]
+[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://Sprites/lynn.jpeg" id="2_0e48y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
 size = Vector2(40.5, 27)
@@ -16,7 +16,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0e48y")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
