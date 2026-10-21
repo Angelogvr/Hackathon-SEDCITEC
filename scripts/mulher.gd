@@ -3,27 +3,17 @@ extends Node2D
 class_name Level
 
 @export var dialogos: Array
+@export var faceset: Array
+@export var tittle: Array
 
 @export_category("Objects")
 @export var _hud: CanvasLayer = null
 
 @onready var animacao_botao_f: AnimatedSprite2D = $animacao_botaoF
 
-@onready var _dialog_data: Dictionary = {
-	0: {
-		"faceset": "res://Sprites/lynn.jpeg",
-		"dialog": dialogos[0],
-		"title": "Lyn"
-	},
-	1: {
-		"faceset": "res://Sprites/lynn.jpeg",
-		"dialog": "ESSA É MINHA SEGUNDA FALA DA MULHER LYN",
-		"title": "Lyn"
-	}
-}
 
 const _DIALOG_SCREEN: PackedScene = preload("res://entidades/dialog_scream.tscn")
-const _PERSONAGEM := "Você é Lyn, uma personagem simpática de um jogo. Responda sempre em português, em no máximo 2 frases curtas."
+var _PERSONAGEM: String = ""
 
 var target: Node2D
 var botaoAtivo = false
@@ -37,9 +27,12 @@ var _historico: Array = []
 func _ready() -> void:
 	animacao_botao_f.visible = false
 	get_target()
-
+	if dialogos.size() > 0:
+		_PERSONAGEM = dialogos[0]
+	else:
+		_PERSONAGEM = "Você é um aviso que deve avisar para o jogador tentar novamente conversar com voce. Responda sempre em português de forma curta."
 	_campo = LineEdit.new()
-	_campo.placeholder_text = "Fale com a Lyn e aperte Enter..."
+	_campo.placeholder_text = "Fale com o quadro e aperte Enter..."
 	_campo.custom_minimum_size = Vector2(500, 40)
 	_campo.position = Vector2(200, 500)
 	_campo.visible = false
@@ -132,9 +125,9 @@ func _perguntar_ia() -> void:
 
 	nova_tela.data = {
 		0: {
-			"faceset": "res://sprites/lynn.jpeg",
+			"faceset": faceset[0],
 			"dialog": "",
-			"title": "Lyn"
+			"title": tittle[0]
 		}
 	}
 

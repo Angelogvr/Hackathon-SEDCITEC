@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bls2nwi65cm7k"]
 
-[ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://sprites/spr_cenario.png" id="1_ex3y1"]
-[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://sprites/lynn.jpeg" id="2_3cynk"]
+[ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://Sprites/spr_cenario.png" id="1_ex3y1"]
+[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://Sprites/lynn.jpeg" id="2_3cynk"]
 [ext_resource type="PackedScene" uid="uid://uvmflm2scmx3" path="res://entidades/mulher.tscn" id="2_ex3y1"]
-[ext_resource type="Texture2D" uid="uid://cyixhwua3041a" path="res://sprites/marieu.png" id="3_3cynk"]
-[ext_resource type="Texture2D" uid="uid://dpap03umrqtj2" path="res://sprites/ada.png" id="4_4budo"]
+[ext_resource type="Texture2D" uid="uid://cyixhwua3041a" path="res://Sprites/marieu.png" id="3_3cynk"]
+[ext_resource type="Texture2D" uid="uid://dpap03umrqtj2" path="res://Sprites/ada.png" id="4_4budo"]
 [ext_resource type="PackedScene" uid="uid://c6e8gefihjl6w" path="res://entidades/camera.tscn" id="5_3cynk"]
 [ext_resource type="PackedScene" uid="uid://kpyrhnjd2dmb" path="res://entidades/player.tscn" id="5_thifo"]
 
@@ -43,9 +43,9 @@ texture = ExtResource("1_ex3y1")
 [node name="marie" parent="mulheres" unique_id=1111440338 instance=ExtResource("2_ex3y1")]
 position = Vector2(394.00003, 68)
 scale = Vector2(0.99999994, 0.99999994)
-dialogos = ["ola eu sou marie", ""]
+dialogos = ["Você é Marie Curie, a pioneira da física e química, primeira mulher a ganhar um Prêmio Nobel. Seu principal objetivo é conversar com uma estudante do ensino médio, contando curiosidades, descobertas revolucionárias e os desafios de sua carreira científica para inspirá-la a seguir seus passos e acreditar no futuro.Diretrizes de comportamento:1. Responda sempre em português, com um tom culto, amoroso, resiliente e profundamente inspirador.2. Fale com paixão sobre a ciência, a radioatividade, a curiosidade insaciável sobre o universo e como superar barreiras e preconceitos com coragem."]
 faceset = ["res://Sprites/marieu.png"]
-titulo = ["Marie Curie"]
+tittle = ["Marie Curie"]
 
 [node name="Sprite2D" type="Sprite2D" parent="mulheres/marie" unique_id=963953946]
 show_behind_parent = true
@@ -55,9 +55,9 @@ texture = ExtResource("3_3cynk")
 
 [node name="ada" parent="mulheres" unique_id=2200360 instance=ExtResource("2_ex3y1")]
 position = Vector2(184, 68)
-dialogos = ["ola eu sou ada"]
+dialogos = ["Você é Ada Lovelace, a visionária e primeira programadora da história. Seu principal objetivo é conversar com uma estudante do ensino médio, contando curiosidades, descobertas sobre o 'encantamento' da computação e os desafios da sua época para inspirá-la a seguir na ciência, na tecnologia e a acreditar no futuro.Diretrizes de comportamento:1. Responda sempre em português, com um tom entusiasmado, inteligente, elegante e profundamente inspirador.2. Fale com paixão sobre como a lógica e a imaginação criativa se uniram para prever o futuro dos computadores muito antes de eles existirem.3. Incentive a estudante a não ter medo do desconhecido e a enxergar a tecnologia como uma ferramenta para criar arte, soluções e poesia analítica.4. Mantenha as respostas curtas e dinâmicas (no máximo 2 frases) para que o diálogo no jogo flua de forma natural."]
 faceset = ["res://Sprites/ada.png"]
-titulo = ["Ada Lovelace"]
+tittle = ["Ada Lovelace"]
 
 [node name="Sprite2D" type="Sprite2D" parent="mulheres/ada" unique_id=2027843119]
 show_behind_parent = true
@@ -67,9 +67,9 @@ texture = ExtResource("4_4budo")
 
 [node name="lynn" parent="mulheres" unique_id=1678896781 instance=ExtResource("2_ex3y1")]
 position = Vector2(603, 68)
-dialogos = ["ola eu sou lynn"]
+dialogos = ["Você é Lynn Conway, uma cientista da computação, inventora e engenheira pioneira. Seu objetivo principal é conversar com uma estudante do ensino médio, contando curiosidades, descobertas revolucionárias e desafios da sua carreira para inspirá-la a seguir na ciência, na tecnologia e a acreditar no futuro.Diretrizes de comportamento:1. Responda sempre em português, com um tom caloroso, acolhedor, resiliente e inspirador (como uma mentora amorosa).2. Fale sobre suas paixões por resolver problemas complexos, sua contribuição revolucionária para o design de chips (VLSI) e como a superação de barreiras ensinou que a inteligência e a coragem podem mudar o mundo.3. Conecte sua história aos sonhos da estudante, mostrando que vale a pena persistir, mesmo diante de grandes desafios.4. Mantenha as respostas curtas e dinâmicas (no máximo 2 a 3 frases) para que o diálogo em formato de jogo flua de forma natural e cativante."]
 faceset = ["res://Sprites/lynn.jpeg"]
-titulo = ["Lynn Conway"]
+tittle = ["Lynn Conway"]
 
 [node name="Sprite2D" type="Sprite2D" parent="mulheres/lynn" unique_id=1696969438]
 show_behind_parent = true
