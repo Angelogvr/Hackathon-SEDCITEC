@@ -36,13 +36,11 @@ var _historico: Array = []
 
 func _dialogo() -> void:
 	var f_apertou := Input.is_action_just_pressed("interact")
-
-	if f_apertou:
-		print("F apertado | botaoAtivo: ", botaoAtivo, " | dialogo ativo: ", is_instance_valid(_dialogo_ativo), " | esperando IA: ", _esperando_ia)
-
+	
 	# se o player se afastar, fecha a caixa de texto
-	if not botaoAtivo and _campo.visible:
-		_campo.hide()
+	#if not botaoAtivo and _campo.visible:
+	#	_campo.hide()
+	#	target.interacting = false
 
 	if botaoAtivo and f_apertou and not is_instance_valid(_dialogo_ativo) and not _esperando_ia and not _campo.visible:
 		var tela := get_viewport().get_visible_rect().size
@@ -52,16 +50,8 @@ func _dialogo() -> void:
 		_campo.text = ""
 		_campo.show()
 		_campo.grab_focus()
-		print("Caixa mostrada em: ", _campo.position, " | tela: ", tela)
-
-	# se o player se afastar, fecha a caixa de texto
-	if not botaoAtivo and _campo.visible:
-		_campo.hide()
-
-	if botaoAtivo and f_apertou and not is_instance_valid(_dialogo_ativo) and not _esperando_ia and not _campo.visible:
-		_campo.text = ""
-		_campo.show()
-		_campo.grab_focus()
+		target.interacting = true
+		
 
 
 func _on_texto_enviado(texto: String) -> void:
@@ -69,6 +59,7 @@ func _on_texto_enviado(texto: String) -> void:
 	if texto.is_empty():
 		return
 
+	target.interacting = false
 	_campo.hide()
 	_campo.release_focus()
 	_esperando_ia = true
@@ -142,16 +133,12 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if abs(target.position[0] - position[0]) < 50:
+func _process(_delta: float) -> void:
+	if abs(target.position[0] - position[0]) < 70 and not target.interacting:
 		botaoAtivo = true
-		animacao_botao_f.visible = true
-		animacao_botao_f.play()
 	else:
 		botaoAtivo = false
-		animacao_botao_f.visible = false
-		animacao_botao_f.pause()
-		animacao_botao_f.frame = 0
+	show_button()
 	_dialogo()
 
 
@@ -162,3 +149,12 @@ func get_target():
 		return
 
 	target = nodes[0]
+	
+func show_button():
+	if botaoAtivo:
+		animacao_botao_f.visible = true
+		animacao_botao_f.play()
+	else:
+		animacao_botao_f.visible = false
+		animacao_botao_f.pause()
+		animacao_botao_f.frame = 0

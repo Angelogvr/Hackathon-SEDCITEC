@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hvypnroiild"
-path="res://.godot/imported/Falling (16 x 16).png-b63e55a5eb9468d0eddf1e1c19feb00a.ctex"
+path="res://.godot/imported/Falling (16 x 16).png-11874a016daa6c38f126545921e014a8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/1 - Penguin/Falling (16 x 16).png"
-dest_files=["res://.godot/imported/Falling (16 x 16).png-b63e55a5eb9468d0eddf1e1c19feb00a.ctex"]
+source_file="res://sprites/1 - Penguin/Falling (16 x 16).png"
+dest_files=["res://.godot/imported/Falling (16 x 16).png-11874a016daa6c38f126545921e014a8.ctex"]
 
 [params]
 

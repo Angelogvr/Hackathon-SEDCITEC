@@ -18,3 +18,4 @@ func get_target():
 		return
 	
 	target = nodes[0]
+ 
