@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kerrf2njrba6"
-path="res://.godot/imported/Looking_Off (16 x 16).png-58a4c39f6ef7c3f8472e484b29efe592.ctex"
+path="res://.godot/imported/Looking_Off (16 x 16).png-a6e041b667ac926b855090b23acb2a42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/1 - Penguin/Looking_Off (16 x 16).png"
-dest_files=["res://.godot/imported/Looking_Off (16 x 16).png-58a4c39f6ef7c3f8472e484b29efe592.ctex"]
+source_file="res://sprites/1 - Penguin/Looking_Off (16 x 16).png"
+dest_files=["res://.godot/imported/Looking_Off (16 x 16).png-a6e041b667ac926b855090b23acb2a42.ctex"]
 
 [params]
 
