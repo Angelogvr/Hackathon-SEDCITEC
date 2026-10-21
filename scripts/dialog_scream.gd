@@ -23,6 +23,8 @@ var _velocidade_pontos: float = 0.35
 
 
 func _ready() -> void:
+	_dialog.add_theme_font_size_override("normal_font_size", 10)
+	_name.add_theme_font_size_override("font_size", 12)
 	_initialize_dialog()
 
 
