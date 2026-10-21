@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://cmi8y26rww5ks"]
 
-[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://Sprites/lynn.jpeg" id="1_lo876"]
+[ext_resource type="Script" uid="uid://cqtcjwlwwhjpr" path="res://scripts/dialog_scream.gd" id="1_8ufjh"]
+[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://Sprites/lynn.jpeg" id="2_bnrj5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wvhbo"]
 shadow_color = Color(0, 0, 0, 0.6)
 
-[node name="DialogScream" type="Control" unique_id=801305259]
+[node name="DialogScream" type="Control" unique_id=801305259 node_paths=PackedStringArray("_name", "_dialog", "_faceset")]
 custom_minimum_size = Vector2(320, 80)
 layout_mode = 3
 anchors_preset = 15
@@ -18,6 +19,10 @@ offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
+script = ExtResource("1_8ufjh")
+_name = NodePath("ColorRect/HContainer/VContainer/name")
+_dialog = NodePath("ColorRect/HContainer/VContainer/dialog")
+_faceset = NodePath("ColorRect/HContainer/Border/faceset")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=252044219]
 layout_mode = 1
@@ -61,7 +66,7 @@ offset_right = 35.0
 offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_lo876")
+texture = ExtResource("2_bnrj5")
 expand_mode = 1
 stretch_mode = 5
 

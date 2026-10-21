@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkv1isfqdnu1r"
-path="res://.godot/imported/Surprised (16 x 16).png-8bf26a1030e24105e58fb62248d04de3.ctex"
+path="res://.godot/imported/Surprised (16 x 16).png-6663455c219c94876807b806313d73d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/1 - Penguin/Surprised (16 x 16).png"
-dest_files=["res://.godot/imported/Surprised (16 x 16).png-8bf26a1030e24105e58fb62248d04de3.ctex"]
+source_file="res://Sprites/1 - Penguin/Surprised (16 x 16).png"
+dest_files=["res://.godot/imported/Surprised (16 x 16).png-6663455c219c94876807b806313d73d0.ctex"]
 
 [params]
 
