@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://uvmflm2scmx3"]
 
 [ext_resource type="Script" uid="uid://dgesh8n1fvyod" path="res://scripts/mulher.gd" id="1_opsxw"]
-[ext_resource type="Texture2D" uid="uid://clpfwoev1jogq" path="res://Sprites/tecla_F_idle_spritesheet_16x16.png" id="2_qn3sk"]
+[ext_resource type="Texture2D" uid="uid://clpfwoev1jogq" path="res://sprites/tecla_F_idle_spritesheet_16x16.png" id="2_qn3sk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k1af1"]
 size = Vector2(68.75, 80)

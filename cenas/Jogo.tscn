@@ -40,9 +40,11 @@ texture = ExtResource("1_ex3y1")
 
 [node name="marie" parent="mulheres" unique_id=1111440338 instance=ExtResource("2_ex3y1")]
 position = Vector2(394, 68)
+dialogos = ["ola eu sou marie"]
 
 [node name="ada" parent="mulheres" unique_id=2200360 instance=ExtResource("2_ex3y1")]
 position = Vector2(184, 68)
+dialogos = ["ola eu sou ada"]
 
 [node name="Player" parent="." unique_id=1744638049 instance=ExtResource("5_thifo")]
 position = Vector2(214, 142)
