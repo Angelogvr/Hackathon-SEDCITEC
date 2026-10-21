@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://uvmflm2scmx3"]
+
+[ext_resource type="Script" uid="uid://dgesh8n1fvyod" path="res://scripts/mulher.gd" id="1_opsxw"]
+[ext_resource type="Texture2D" uid="uid://clpfwoev1jogq" path="res://sprites/tecla_F_idle_spritesheet_16x16.png" id="2_qn3sk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k1af1"]
+size = Vector2(68.75, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84c0c"]
+atlas = ExtResource("2_qn3sk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bttkk"]
+atlas = ExtResource("2_qn3sk")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nislf"]
+atlas = ExtResource("2_qn3sk")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ytw0"]
+atlas = ExtResource("2_qn3sk")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tog6o"]
+atlas = ExtResource("2_qn3sk")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyfkh"]
+atlas = ExtResource("2_qn3sk")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtakn"]
+atlas = ExtResource("2_qn3sk")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syi4v"]
+atlas = ExtResource("2_qn3sk")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qn3sk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84c0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bttkk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nislf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ytw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tog6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyfkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtakn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syi4v")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="mulher" type="StaticBody2D" unique_id=1111440338]
+script = ExtResource("1_opsxw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1264708090]
+position = Vector2(4.375, -28)
+shape = SubResource("RectangleShape2D_k1af1")
+
+[node name="animacao_botaoF" type="AnimatedSprite2D" parent="." unique_id=1424173791]
+position = Vector2(5, 17)
+scale = Vector2(1.953125, 1.9843751)
+sprite_frames = SubResource("SpriteFrames_qn3sk")
+frame_progress = 0.8976013
