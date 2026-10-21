@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dpap03umrqtj2" path="res://sprites/ada.png" id="4_4budo"]
 [ext_resource type="PackedScene" uid="uid://c6e8gefihjl6w" path="res://entidades/camera.tscn" id="5_3cynk"]
 [ext_resource type="PackedScene" uid="uid://kpyrhnjd2dmb" path="res://entidades/player.tscn" id="5_thifo"]
-[ext_resource type="PackedScene" uid="uid://c75cuatlea35f" path="res://entidades/pause_menu.tscn" id="9_2yyff"]
+[ext_resource type="PackedScene" uid="uid://c7xqckfjibo7p" path="res://entidades/pause_menu.tscn" id="9_2yyff"]
 
 [sub_resource type="GDScript" id="GDScript_0b3n2"]
 script/source = "extends Node2D
@@ -108,7 +108,7 @@ position = Vector2(248, 124)
 
 [node name="pause_menu" parent="CanvasLayer" unique_id=1377178930 instance=ExtResource("9_2yyff")]
 process_mode = 3
-offset_left = 151.0
-offset_top = 57.0
-offset_right = 151.0
-offset_bottom = 57.0
+offset_left = 82.0
+offset_top = 20.0
+offset_right = 82.0
+offset_bottom = 20.0

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c75cuatlea35f"]
+[gd_scene format=3 uid="uid://c7xqckfjibo7p"]
 
 [ext_resource type="Script" uid="uid://dxgmjb5p3aj74" path="res://scripts/pause_menu.gd" id="1_i0ga5"]
 [ext_resource type="Texture2D" uid="uid://b62lrqu1oitdk" path="res://sprites/Buttons/container_pixel_art_fundo_transparente.png" id="2_gy246"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bnvsj5k0anp16" path="res://sprites/Buttons/RESUMIR_hover_transparente.png" id="3_gy246"]
 [ext_resource type="Texture2D" uid="uid://dmmho7loropep" path="res://sprites/Buttons/SAIR_normal_transparente.png" id="4_fxc1p"]
 [ext_resource type="Texture2D" uid="uid://c1oo1o6a0vj80" path="res://sprites/Buttons/SAIR_hover_transparente.png" id="5_4mfpr"]
+[ext_resource type="Texture2D" uid="uid://drdgf70fqfomr" path="res://sprites/Buttons/tut_1 (2).png" id="5_5bic0"]
+[ext_resource type="Texture2D" uid="uid://cp7utlg1d5maj" path="res://sprites/Buttons/tut_1 (1).png" id="6_6wip2"]
+[ext_resource type="Texture2D" uid="uid://ssgubbdc4v03" path="res://sprites/Buttons/Pixel Woodcraft Controls Sign.png" id="9_6wip2"]
+[ext_resource type="Texture2D" uid="uid://hudiasiod4j8" path="res://sprites/Buttons/1443321549047.png" id="10_6e258"]
 
 [node name="pause_menu" type="Control" unique_id=1377178930]
 process_mode = 2
@@ -18,28 +22,49 @@ grow_vertical = 2
 script = ExtResource("1_i0ga5")
 
 [node name="ContainerPixelArtFundoTransparente" type="Sprite2D" parent="." unique_id=1372010142]
-position = Vector2(69, 46)
-scale = Vector2(0.09185083, 0.102009594)
+position = Vector2(68, 70)
+scale = Vector2(0.09530386, 0.14676906)
 texture = ExtResource("2_gy246")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1303441563]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(0.062244207, 0.062244207)
+[node name="MarginContainer" type="MarginContainer" parent="ContainerPixelArtFundoTransparente" unique_id=1303441563]
+offset_left = -713.50726
+offset_top = -476.93976
+offset_right = 1458.4927
+offset_bottom = 1703.0603
+scale = Vector2(0.6572668, 0.4204729)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=100617973]
+[node name="VBoxContainer" type="VBoxContainer" parent="ContainerPixelArtFundoTransparente/MarginContainer" unique_id=100617973]
 layout_mode = 2
 
-[node name="Resume" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=1000451137]
+[node name="Resume" type="TextureButton" parent="ContainerPixelArtFundoTransparente/MarginContainer/VBoxContainer" unique_id=1000451137]
 layout_mode = 2
 texture_normal = ExtResource("2_lbo4h")
 texture_hover = ExtResource("3_gy246")
 
-[node name="Quit" type="TextureButton" parent="MarginContainer/VBoxContainer" unique_id=2014305271]
+[node name="Tutorial" type="TextureButton" parent="ContainerPixelArtFundoTransparente/MarginContainer/VBoxContainer" unique_id=1610597190]
+layout_mode = 2
+texture_normal = ExtResource("5_5bic0")
+texture_hover = ExtResource("6_6wip2")
+
+[node name="Quit" type="TextureButton" parent="ContainerPixelArtFundoTransparente/MarginContainer/VBoxContainer" unique_id=2014305271]
 layout_mode = 2
 texture_normal = ExtResource("4_fxc1p")
 texture_hover = ExtResource("5_4mfpr")
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[node name="PixelWoodcraftControlsSign" type="Sprite2D" parent="." unique_id=1628062013]
+position = Vector2(124, 64)
+scale = Vector2(0.16760787, 0.2010499)
+texture = ExtResource("9_6wip2")
+
+[node name="Back" type="TextureButton" parent="PixelWoodcraftControlsSign" unique_id=1170739435]
+offset_left = -643.92224
+offset_top = -232.52753
+offset_right = -393.92224
+offset_bottom = 17.472473
+scale = Vector2(0.5007974, 0.5007974)
+texture_normal = ExtResource("10_6e258")
+
+[connection signal="pressed" from="ContainerPixelArtFundoTransparente/MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="ContainerPixelArtFundoTransparente/MarginContainer/VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="ContainerPixelArtFundoTransparente/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="PixelWoodcraftControlsSign/Back" to="." method="_on_back_pressed"]
