@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bls2nwi65cm7k"]
 
-[ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://sprites/spr_cenario.png" id="1_ex3y1"]
-[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://sprites/lynn.jpeg" id="2_3cynk"]
+[ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://Sprites/spr_cenario.png" id="1_ex3y1"]
+[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://Sprites/lynn.jpeg" id="2_3cynk"]
 [ext_resource type="PackedScene" uid="uid://uvmflm2scmx3" path="res://entidades/mulher.tscn" id="2_ex3y1"]
-[ext_resource type="Texture2D" uid="uid://cyixhwua3041a" path="res://sprites/marieu.png" id="3_3cynk"]
-[ext_resource type="Texture2D" uid="uid://dpap03umrqtj2" path="res://sprites/ada.png" id="4_4budo"]
+[ext_resource type="Texture2D" uid="uid://cyixhwua3041a" path="res://Sprites/marieu.png" id="3_3cynk"]
+[ext_resource type="Texture2D" uid="uid://dpap03umrqtj2" path="res://Sprites/ada.png" id="4_4budo"]
 [ext_resource type="PackedScene" uid="uid://c6e8gefihjl6w" path="res://entidades/camera.tscn" id="5_3cynk"]
 [ext_resource type="PackedScene" uid="uid://kpyrhnjd2dmb" path="res://entidades/player.tscn" id="5_thifo"]
 
@@ -45,6 +45,8 @@ texture = ExtResource("1_ex3y1")
 position = Vector2(394.00003, 68)
 scale = Vector2(0.99999994, 0.99999994)
 dialogos = ["ola eu sou marie", ""]
+faceset = ["res://Sprites/marieu.png"]
+titulo = ["Marie Curie"]
 
 [node name="Sprite2D" type="Sprite2D" parent="mulheres/marie" unique_id=963953946]
 show_behind_parent = true
@@ -55,6 +57,8 @@ texture = ExtResource("3_3cynk")
 [node name="ada" parent="mulheres" unique_id=2200360 instance=ExtResource("2_ex3y1")]
 position = Vector2(184, 68)
 dialogos = ["ola eu sou ada"]
+faceset = ["res://Sprites/ada.png"]
+titulo = ["Ada Lovelace"]
 
 [node name="Sprite2D" type="Sprite2D" parent="mulheres/ada" unique_id=2027843119]
 show_behind_parent = true
@@ -65,6 +69,8 @@ texture = ExtResource("4_4budo")
 [node name="lynn" parent="mulheres" unique_id=1678896781 instance=ExtResource("2_ex3y1")]
 position = Vector2(603, 68)
 dialogos = ["ola eu sou lynn"]
+faceset = ["res://Sprites/lynn.jpeg"]
+titulo = ["Lynn Conway"]
 
 [node name="Sprite2D" type="Sprite2D" parent="mulheres/lynn" unique_id=1696969438]
 show_behind_parent = true

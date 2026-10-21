@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cmi8y26rww5ks"]
 
 [ext_resource type="Script" uid="uid://cqtcjwlwwhjpr" path="res://scripts/dialog_scream.gd" id="1_8ufjh"]
-[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://sprites/lynn.jpeg" id="2_bnrj5"]
+[ext_resource type="Texture2D" uid="uid://cyixhwua3041a" path="res://Sprites/marieu.png" id="2_8ufjh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wvhbo"]
 shadow_color = Color(0, 0, 0, 0.6)
@@ -54,6 +54,7 @@ layout_mode = 2
 
 [node name="faceset" type="TextureRect" parent="ColorRect/HContainer/Border" unique_id=909207354]
 custom_minimum_size = Vector2(70, 72)
+custom_maximum_size = Vector2(-1, 70)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -66,9 +67,9 @@ offset_right = 35.0
 offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_bnrj5")
+texture = ExtResource("2_8ufjh")
 expand_mode = 1
-stretch_mode = 5
+stretch_mode = 6
 
 [node name="VContainer" type="VBoxContainer" parent="ColorRect/HContainer" unique_id=1521269216]
 layout_mode = 2

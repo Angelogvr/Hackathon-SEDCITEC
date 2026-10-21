@@ -1,6 +1,8 @@
 extends Node2D
 class_name Level
 @export var dialogos: Array
+@export var faceset: Array
+@export var titulo: Array
 
 @export_category("Objects")
 @export var _hud: CanvasLayer = null
@@ -8,14 +10,14 @@ class_name Level
 @onready var animacao_botao_f: AnimatedSprite2D = $animacao_botaoF
 @onready var _dialog_data: Dictionary = {
 	0: {
-		"faceset": "res://Sprites/lynn.jpeg",
+		"faceset": faceset[0],
 		"dialog": dialogos[0],
-		"title": "Lyn"
+		"title": titulo[0]
 	},
 	1: {
-		"faceset": "res://Sprites/lynn.jpeg",
+		"faceset": faceset[0],
 		"dialog": "ESSA É MINHA SEGUNDA FALA DA MULHER LYN",
-		"title": "Lyn"
+		"title": titulo[0]
 	},
 }
 
