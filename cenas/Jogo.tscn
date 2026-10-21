@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://sprites/spr_cenario.png" id="1_ex3y1"]
 [ext_resource type="PackedScene" uid="uid://uvmflm2scmx3" path="res://entidades/mulher.tscn" id="2_ex3y1"]
+[ext_resource type="Texture2D" uid="uid://cyixhwua3041a" path="res://sprites/marieu.png" id="3_3cynk"]
 [ext_resource type="PackedScene" uid="uid://c6e8gefihjl6w" path="res://entidades/camera.tscn" id="5_3cynk"]
 [ext_resource type="PackedScene" uid="uid://kpyrhnjd2dmb" path="res://entidades/player.tscn" id="5_thifo"]
 
@@ -39,8 +40,15 @@ texture = ExtResource("1_ex3y1")
 [node name="mulheres" type="Node2D" parent="." unique_id=376752827]
 
 [node name="marie" parent="mulheres" unique_id=1111440338 instance=ExtResource("2_ex3y1")]
-position = Vector2(394, 68)
+position = Vector2(394.00003, 68)
+scale = Vector2(0.99999994, 0.99999994)
 dialogos = ["ola eu sou marie"]
+
+[node name="Sprite2D" type="Sprite2D" parent="mulheres/marie" unique_id=963953946]
+show_behind_parent = true
+position = Vector2(4.4999695, -27.765625)
+scale = Vector2(0.04622396, 0.040267937)
+texture = ExtResource("3_3cynk")
 
 [node name="ada" parent="mulheres" unique_id=2200360 instance=ExtResource("2_ex3y1")]
 position = Vector2(184, 68)

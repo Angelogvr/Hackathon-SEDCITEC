@@ -1,15 +1,11 @@
-extends StaticBody2D
+extends Node2D
 class_name Level
 @export var dialogos: Array
-
-const _DIALOG_SCREEN: PackedScene = preload("res://entidades/dialog_scream.tscn")
-var target: Node2D
-var botaoAtivo = false
-@onready var animacao_botao_f: AnimatedSprite2D = $animacao_botaoF
 
 @export_category("Objects")
 @export var _hud: CanvasLayer = null
 
+@onready var animacao_botao_f: AnimatedSprite2D = $animacao_botaoF
 @onready var _dialog_data: Dictionary = {
 	0: {
 		"faceset": "res://Sprites/lynn.jpeg",
@@ -22,6 +18,10 @@ var botaoAtivo = false
 		"title": "Lyn"
 	},
 }
+
+const _DIALOG_SCREEN: PackedScene = preload("res://entidades/dialog_scream.tscn")
+var target: Node2D
+var botaoAtivo = false
 
 func _dialogo() -> void:
 	if botaoAtivo and Input.is_physical_key_pressed(KEY_F):
