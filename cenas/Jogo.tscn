@@ -1,12 +1,31 @@
 [gd_scene format=3 uid="uid://bls2nwi65cm7k"]
 
-[ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://Sprites/spr_cenario.png" id="1_ex3y1"]
-[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://Sprites/lynn.jpeg" id="2_3cynk"]
+[ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://sprites/spr_cenario.png" id="1_ex3y1"]
+[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://sprites/lynn.jpeg" id="2_3cynk"]
 [ext_resource type="PackedScene" uid="uid://uvmflm2scmx3" path="res://entidades/mulher.tscn" id="2_ex3y1"]
-[ext_resource type="Texture2D" uid="uid://cyixhwua3041a" path="res://Sprites/marieu.png" id="3_3cynk"]
-[ext_resource type="Texture2D" uid="uid://dpap03umrqtj2" path="res://Sprites/ada.png" id="4_4budo"]
+[ext_resource type="Texture2D" uid="uid://cyixhwua3041a" path="res://sprites/marieu.png" id="3_3cynk"]
+[ext_resource type="Texture2D" uid="uid://dpap03umrqtj2" path="res://sprites/ada.png" id="4_4budo"]
 [ext_resource type="PackedScene" uid="uid://c6e8gefihjl6w" path="res://entidades/camera.tscn" id="5_3cynk"]
 [ext_resource type="PackedScene" uid="uid://kpyrhnjd2dmb" path="res://entidades/player.tscn" id="5_thifo"]
+[ext_resource type="PackedScene" uid="uid://c75cuatlea35f" path="res://entidades/pause_menu.tscn" id="9_2yyff"]
+
+[sub_resource type="GDScript" id="GDScript_0b3n2"]
+script/source = "extends Node2D
+@onready var pause_menu: Control = $CanvasLayer/pause_menu
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pause_menu.hide()
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+	#if Input.is_action_just_pressed(\"pause\"):
+		#print(\"oi22\")
+		#get_tree().paused = true
+		#pause_menu.show()
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
 size = Vector2(1005.5, 67.5)
@@ -16,6 +35,8 @@ a = Vector2(125, 175)
 b = Vector2(123, -25)
 
 [node name="Game" type="Node2D" unique_id=1184867715]
+process_mode = 1
+script = SubResource("GDScript_0b3n2")
 
 [node name="Background" type="Node2D" parent="." unique_id=1181801678]
 
@@ -82,3 +103,12 @@ position = Vector2(105, 126)
 
 [node name="Camera" parent="." unique_id=1173946392 instance=ExtResource("5_3cynk")]
 position = Vector2(248, 124)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1649622255]
+
+[node name="pause_menu" parent="CanvasLayer" unique_id=1377178930 instance=ExtResource("9_2yyff")]
+process_mode = 3
+offset_left = 151.0
+offset_top = 57.0
+offset_right = 151.0
+offset_bottom = 57.0
