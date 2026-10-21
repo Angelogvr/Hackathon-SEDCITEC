@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cmi8y26rww5ks"]
+
+[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://Sprites/lynn.jpeg" id="1_lo876"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wvhbo"]
+shadow_color = Color(0, 0, 0, 0.6)
+
+[node name="DialogScream" type="Control" unique_id=801305259]
+custom_minimum_size = Vector2(320, 80)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 95.0
+offset_top = 156.0
+offset_right = -85.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=252044219]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="HContainer" type="HBoxContainer" parent="ColorRect" unique_id=680825551]
+custom_minimum_size = Vector2(312, 72)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -156.0
+offset_top = -36.0
+offset_right = 156.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Border" type="ColorRect" parent="ColorRect/HContainer" unique_id=431425640]
+custom_minimum_size = Vector2(72, 0)
+layout_mode = 2
+
+[node name="faceset" type="TextureRect" parent="ColorRect/HContainer/Border" unique_id=909207354]
+custom_minimum_size = Vector2(70, 72)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -36.0
+offset_right = 35.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lo876")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VContainer" type="VBoxContainer" parent="ColorRect/HContainer" unique_id=1521269216]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="name" type="Label" parent="ColorRect/HContainer/VContainer" unique_id=294419157]
+layout_mode = 2
+text = "Lynn"
+label_settings = SubResource("LabelSettings_wvhbo")
+horizontal_alignment = 2
+
+[node name="dialog" type="RichTextLabel" parent="ColorRect/HContainer/VContainer" unique_id=1818845280]
+layout_mode = 2
+size_flags_vertical = 3

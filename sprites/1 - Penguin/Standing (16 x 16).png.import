@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgcdjc7rnlfcn"
-path="res://.godot/imported/Standing (16 x 16).png-1051f777e9fd0d3e5afd5ea7d8d716d0.ctex"
+path="res://.godot/imported/Standing (16 x 16).png-fa36e9fcfae9c8c4b4a2189af3aba48c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/1 - Penguin/Standing (16 x 16).png"
-dest_files=["res://.godot/imported/Standing (16 x 16).png-1051f777e9fd0d3e5afd5ea7d8d716d0.ctex"]
+source_file="res://Sprites/1 - Penguin/Standing (16 x 16).png"
+dest_files=["res://.godot/imported/Standing (16 x 16).png-fa36e9fcfae9c8c4b4a2189af3aba48c.ctex"]
 
 [params]
 
