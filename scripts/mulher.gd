@@ -15,6 +15,11 @@ var _dialog_data: Dictionary = {
 		"dialog": "ooi allyson",
 		"title": "Lyn"
 	},
+	1: {
+		"faceset": "res://Sprites/lynn.jpeg",
+		"dialog": "ESSA É MINHA SEGUNDA FALA DA MULHER LYN",
+		"title": "Lyn"
+	},
 }
 
 @export_category("Objects")
