@@ -44,7 +44,7 @@ texture = ExtResource("1_ex3y1")
 [node name="marie" parent="mulheres" unique_id=1111440338 instance=ExtResource("2_ex3y1")]
 position = Vector2(394.00003, 68)
 scale = Vector2(0.99999994, 0.99999994)
-dialogos = ["ola eu sou marie"]
+dialogos = ["ola eu sou marie", ""]
 
 [node name="Sprite2D" type="Sprite2D" parent="mulheres/marie" unique_id=963953946]
 show_behind_parent = true

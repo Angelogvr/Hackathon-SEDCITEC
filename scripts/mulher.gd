@@ -26,11 +26,13 @@ var _dialogo_ativo: DialogScreen = null
 
 
 func _dialogo() -> void:
-	if botaoAtivo and Input.is_physical_key_pressed(KEY_F) and not is_instance_valid(_dialogo_ativo):
+	if botaoAtivo and Input.is_action_just_pressed("interact") and not is_instance_valid(_dialogo_ativo):
 		var _new_dialog: DialogScreen = _DIALOG_SCREEN.instantiate()
 		_new_dialog.data = _dialog_data
 		_dialogo_ativo = _new_dialog
 		_hud.add_child(_new_dialog)
+	elif not botaoAtivo and is_instance_valid(_dialogo_ativo):
+		_dialogo_ativo.queue_free()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -42,13 +44,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if abs(target.position[0] - position[0]) < 50:
 		botaoAtivo = true
-		animacao_botao_f.visible = true
-		animacao_botao_f.play()
 	else:
 		botaoAtivo = false
-		animacao_botao_f.visible = false
-		animacao_botao_f.pause()
-		animacao_botao_f.frame = 0
+	show_button()
 	_dialogo()
 	
 	
@@ -60,3 +58,11 @@ func get_target():
 	
 	target = nodes[0]
 	
+func show_button():
+		if botaoAtivo:
+			animacao_botao_f.visible = true
+			animacao_botao_f.play()
+		else:
+			animacao_botao_f.visible = false
+			animacao_botao_f.pause()
+			animacao_botao_f.frame = 0

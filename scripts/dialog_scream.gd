@@ -16,12 +16,12 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if Input.is_action_pressed("ui_accept") and _dialog.visible_ratio < 1:
+	if Input.is_action_pressed("interact") and _dialog.visible_ratio < 1:
 		_step = 0.01
 		return
 	
 	_step = 0.05
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("interact"):
 		_id += 1
 		if _id == data.size():
 			queue_free()

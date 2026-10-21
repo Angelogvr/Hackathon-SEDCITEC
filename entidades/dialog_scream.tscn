@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cmi8y26rww5ks"]
 
 [ext_resource type="Script" uid="uid://cqtcjwlwwhjpr" path="res://scripts/dialog_scream.gd" id="1_8ufjh"]
-[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://Sprites/lynn.jpeg" id="2_bnrj5"]
+[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://sprites/lynn.jpeg" id="2_bnrj5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wvhbo"]
 shadow_color = Color(0, 0, 0, 0.6)
