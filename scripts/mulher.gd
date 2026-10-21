@@ -64,7 +64,7 @@ func _dialogo() -> void:
 		_campo.size = Vector2(500, 40)
 		_campo.position = Vector2(
 			(tela.x - 500) / 2,
-			tela.y - 100
+			tela.y - 50
 		)
 
 		_campo.z_index = 100
