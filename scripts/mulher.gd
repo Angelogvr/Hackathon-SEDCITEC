@@ -132,7 +132,7 @@ func _perguntar_ia() -> void:
 
 	nova_tela.data = {
 		0: {
-			"faceset": "res://Sprites/lynn.jpeg",
+			"faceset": "res://sprites/lynn.jpeg",
 			"dialog": "",
 			"title": "Lyn"
 		}
