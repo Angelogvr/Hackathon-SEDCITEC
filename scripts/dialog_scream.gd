@@ -21,11 +21,36 @@ var _velocidade_pontos: float = 0.35
 @export var _dialog: RichTextLabel = null
 @export var _faceset: TextureRect = null
 
+const _TAMANHO_MIN := 6
+const _TAMANHO_MAX := 30
+static var _tamanho_fonte: int = 10
+static var _carregado := false
+const _ARQUIVO := "user://config.cfg"
+
+static func _carregar_tamanho() -> void:
+	var cfg := ConfigFile.new()
+	if cfg.load(_ARQUIVO) == OK:
+		_tamanho_fonte = cfg.get_value("texto", "tamanho_fonte", 10)
+
+
+static func _salvar_tamanho() -> void:
+	var cfg := ConfigFile.new()
+	cfg.set_value("texto", "tamanho_fonte", _tamanho_fonte)
+	cfg.save(_ARQUIVO)
 
 func _ready() -> void:
-	_dialog.add_theme_font_size_override("normal_font_size", 10)
-	_name.add_theme_font_size_override("font_size", 12)
+	if not _carregado:
+		_carregar_tamanho()
+		_carregado = true
+	_aplicar_tamanho()
+	_criar_botoes_fonte()
 	_initialize_dialog()
+
+
+func _mudar_fonte(passo: int) -> void:
+	_tamanho_fonte = clampi(_tamanho_fonte + passo, _TAMANHO_MIN, _TAMANHO_MAX)
+	_aplicar_tamanho()
+	_salvar_tamanho()
 
 
 func _process(delta: float) -> void:
@@ -127,3 +152,23 @@ func atualizar_texto_stream(texto: String) -> void:
 func finalizar_stream() -> void:
 	_stream_ativo = false
 	_aguardando_resposta = false
+	
+
+func _criar_botoes_fonte() -> void:
+	var menos := Button.new()
+	menos.text = "A-"
+	menos.focus_mode = Control.FOCUS_NONE
+	menos.position = Vector2(4, 55)
+	menos.pressed.connect(_mudar_fonte.bind(-2))
+	add_child(menos)
+
+	var mais := Button.new()
+	mais.text = "A+"
+	mais.focus_mode = Control.FOCUS_NONE
+	mais.position = Vector2(50, 55)
+	mais.pressed.connect(_mudar_fonte.bind(2))
+	add_child(mais)
+
+func _aplicar_tamanho() -> void:
+	_dialog.add_theme_font_size_override("normal_font_size", _tamanho_fonte)
+	_name.add_theme_font_size_override("font_size", _tamanho_fonte + 2)
