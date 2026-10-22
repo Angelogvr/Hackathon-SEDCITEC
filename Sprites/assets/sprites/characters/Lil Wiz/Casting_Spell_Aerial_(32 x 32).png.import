@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgseebpgnxbue"
-path="res://.godot/imported/Casting_Spell_Aerial_(32 x 32).png-45b2583fcef6ae7e4d7cc2e282250dd3.ctex"
+path="res://.godot/imported/Casting_Spell_Aerial_(32 x 32).png-bc754f1a5cdd6dbe99a4f017ca551c09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/assets/sprites/characters/Lil Wiz/Casting_Spell_Aerial_(32 x 32).png"
-dest_files=["res://.godot/imported/Casting_Spell_Aerial_(32 x 32).png-45b2583fcef6ae7e4d7cc2e282250dd3.ctex"]
+source_file="res://Sprites/assets/sprites/characters/Lil Wiz/Casting_Spell_Aerial_(32 x 32).png"
+dest_files=["res://.godot/imported/Casting_Spell_Aerial_(32 x 32).png-bc754f1a5cdd6dbe99a4f017ca551c09.ctex"]
 
 [params]
 

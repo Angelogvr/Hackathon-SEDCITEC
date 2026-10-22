@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ehx3lxypwngf"
-path="res://.godot/imported/Timer_Coin_Numbers_Drop-shadowed (8 x 8).png-546024250fee5f33efcfe8c8e0ebf5da.ctex"
+path="res://.godot/imported/Timer_Coin_Numbers_Drop-shadowed (8 x 8).png-7a0a66e6b36e7e9f8cf0af352fb8ff05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Mini UI/Timer_Coin_Numbers_Drop-shadowed (8 x 8).png"
-dest_files=["res://.godot/imported/Timer_Coin_Numbers_Drop-shadowed (8 x 8).png-546024250fee5f33efcfe8c8e0ebf5da.ctex"]
+source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Mini UI/Timer_Coin_Numbers_Drop-shadowed (8 x 8).png"
+dest_files=["res://.godot/imported/Timer_Coin_Numbers_Drop-shadowed (8 x 8).png-7a0a66e6b36e7e9f8cf0af352fb8ff05.ctex"]
 
 [params]
 

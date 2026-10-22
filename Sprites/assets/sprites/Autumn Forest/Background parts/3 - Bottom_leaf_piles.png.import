@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbcbbfxyc37hq"
-path="res://.godot/imported/3 - Bottom_leaf_piles.png-cbbdfd1aa5d72aab0a8e856a9dda70a4.ctex"
+path="res://.godot/imported/3 - Bottom_leaf_piles.png-418339fc379cb03e93f15712c8462228.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/assets/sprites/Autumn Forest/Background parts/3 - Bottom_leaf_piles.png"
-dest_files=["res://.godot/imported/3 - Bottom_leaf_piles.png-cbbdfd1aa5d72aab0a8e856a9dda70a4.ctex"]
+source_file="res://Sprites/assets/sprites/Autumn Forest/Background parts/3 - Bottom_leaf_piles.png"
+dest_files=["res://.godot/imported/3 - Bottom_leaf_piles.png-418339fc379cb03e93f15712c8462228.ctex"]
 
 [params]
 

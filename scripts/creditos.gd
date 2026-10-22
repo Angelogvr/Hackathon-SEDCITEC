@@ -84,6 +84,8 @@ func _input(event: InputEvent) -> void:
 
 func _acabou() -> void:
 	print("Créditos concluídos!")
+	await get_tree().create_timer(1).timeout
+	get_tree().change_scene_to_file("res://cenas/title_screen.tscn")
 	
 func _atualizar_rolagem(progresso: float) -> void:
 	var barra := get_v_scroll_bar()

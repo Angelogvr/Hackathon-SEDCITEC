@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://dy6dvfqacvxww"
-path="res://.godot/imported/boss_attack.mp3-e090b88bf139c9c3f5367093505ca635.mp3str"
+path="res://.godot/imported/boss_attack.mp3-9d1b71c5f6b77fdd517f692b7872ad7f.mp3str"
 
 [deps]
 
-source_file="res://sprites/assets/sounds/boss_attack.mp3"
-dest_files=["res://.godot/imported/boss_attack.mp3-e090b88bf139c9c3f5367093505ca635.mp3str"]
+source_file="res://Sprites/assets/sounds/boss_attack.mp3"
+dest_files=["res://.godot/imported/boss_attack.mp3-9d1b71c5f6b77fdd517f692b7872ad7f.mp3str"]
 
 [params]
 

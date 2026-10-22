@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blpgqvwac1ck8"
-path="res://.godot/imported/Dialog_Box(16 x 16).png-cfa9844a1bcff921eee01ebbe3ead3df.ctex"
+path="res://.godot/imported/Dialog_Box(16 x 16).png-9f1a5d9cc358970aeca1d6952ae69ab9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Mini UI/Dialog_Box(16 x 16).png"
-dest_files=["res://.godot/imported/Dialog_Box(16 x 16).png-cfa9844a1bcff921eee01ebbe3ead3df.ctex"]
+source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Mini UI/Dialog_Box(16 x 16).png"
+dest_files=["res://.godot/imported/Dialog_Box(16 x 16).png-9f1a5d9cc358970aeca1d6952ae69ab9.ctex"]
 
 [params]
 

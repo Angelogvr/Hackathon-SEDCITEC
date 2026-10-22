@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c5uuusbsbp4o2"
-path="res://.godot/imported/boss_recovery.mp3-cee5470cfa58fc0275568cfaef3571e2.mp3str"
+path="res://.godot/imported/boss_recovery.mp3-d737a7a92cefbdb18239cc56a093c0d2.mp3str"
 
 [deps]
 
-source_file="res://sprites/assets/sounds/boss_recovery.mp3"
-dest_files=["res://.godot/imported/boss_recovery.mp3-cee5470cfa58fc0275568cfaef3571e2.mp3str"]
+source_file="res://Sprites/assets/sounds/boss_recovery.mp3"
+dest_files=["res://.godot/imported/boss_recovery.mp3-d737a7a92cefbdb18239cc56a093c0d2.mp3str"]
 
 [params]
 

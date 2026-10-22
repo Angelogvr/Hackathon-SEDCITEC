@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c450w8s730xhk"
-path="res://.godot/imported/Casting_Spell_Repeating_(32 x 32).png-d755adc7280212bc6285e098919aaf1b.ctex"
+path="res://.godot/imported/Casting_Spell_Repeating_(32 x 32).png-8bfb6b11646c169c36d84a403aaa57dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/assets/sprites/characters/Lil Wiz/Casting_Spell_Repeating_(32 x 32).png"
-dest_files=["res://.godot/imported/Casting_Spell_Repeating_(32 x 32).png-d755adc7280212bc6285e098919aaf1b.ctex"]
+source_file="res://Sprites/assets/sprites/characters/Lil Wiz/Casting_Spell_Repeating_(32 x 32).png"
+dest_files=["res://.godot/imported/Casting_Spell_Repeating_(32 x 32).png-8bfb6b11646c169c36d84a403aaa57dc.ctex"]
 
 [params]
 

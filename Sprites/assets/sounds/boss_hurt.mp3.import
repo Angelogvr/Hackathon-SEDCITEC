@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://txmx4jn2owe6"
-path="res://.godot/imported/boss_hurt.mp3-7dbe83a36ba34a5ef0b11bfdc9f0986b.mp3str"
+path="res://.godot/imported/boss_hurt.mp3-2a298c99d532fc6dfe52d3e3e82f26a8.mp3str"
 
 [deps]
 
-source_file="res://sprites/assets/sounds/boss_hurt.mp3"
-dest_files=["res://.godot/imported/boss_hurt.mp3-7dbe83a36ba34a5ef0b11bfdc9f0986b.mp3str"]
+source_file="res://Sprites/assets/sounds/boss_hurt.mp3"
+dest_files=["res://.godot/imported/boss_hurt.mp3-2a298c99d532fc6dfe52d3e3e82f26a8.mp3str"]
 
 [params]
 

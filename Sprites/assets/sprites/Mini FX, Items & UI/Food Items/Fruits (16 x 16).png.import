@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sn21mgonfiox"
-path="res://.godot/imported/Fruits (16 x 16).png-89b00f6833976f3dd0594485b97080e5.ctex"
+path="res://.godot/imported/Fruits (16 x 16).png-e9f741defed847ebb8c69f0118665d25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Food Items/Fruits (16 x 16).png"
-dest_files=["res://.godot/imported/Fruits (16 x 16).png-89b00f6833976f3dd0594485b97080e5.ctex"]
+source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Food Items/Fruits (16 x 16).png"
+dest_files=["res://.godot/imported/Fruits (16 x 16).png-e9f741defed847ebb8c69f0118665d25.ctex"]
 
 [params]
 

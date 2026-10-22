@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d33ac4cwb5jpj"
-path="res://.godot/imported/Health_Indicator_Black_Outline (8 x 8).png-b180d6a4669d2b946bb51cf3be23a4a2.ctex"
+path="res://.godot/imported/Health_Indicator_Black_Outline (8 x 8).png-7c1d7e129ee0bad582ca2efbbbc25f27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png"
-dest_files=["res://.godot/imported/Health_Indicator_Black_Outline (8 x 8).png-b180d6a4669d2b946bb51cf3be23a4a2.ctex"]
+source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Mini UI/Health_Indicator_Black_Outline (8 x 8).png"
+dest_files=["res://.godot/imported/Health_Indicator_Black_Outline (8 x 8).png-7c1d7e129ee0bad582ca2efbbbc25f27.ctex"]
 
 [params]
 

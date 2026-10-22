@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chb7620w4lfx"
-path="res://.godot/imported/Hit.png-3a2b58506718970168d31370af0312f7.ctex"
+path="res://.godot/imported/Hit.png-33b415a97fb8d2f9089dbfa8b26fb4f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Bulldozer/Hit.png"
-dest_files=["res://.godot/imported/Hit.png-3a2b58506718970168d31370af0312f7.ctex"]
+source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Bulldozer/Hit.png"
+dest_files=["res://.godot/imported/Hit.png-33b415a97fb8d2f9089dbfa8b26fb4f3.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cp5wqs3v5qj7i"
-path="res://.godot/imported/Milk_Cartons (16 x 16).png-a978c90788975a38f0bd64f6f5a21baf.ctex"
+path="res://.godot/imported/Milk_Cartons (16 x 16).png-0e7e869cc0071424ae793650c7f5addf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Food Items/Milk_Cartons (16 x 16).png"
-dest_files=["res://.godot/imported/Milk_Cartons (16 x 16).png-a978c90788975a38f0bd64f6f5a21baf.ctex"]
+source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Food Items/Milk_Cartons (16 x 16).png"
+dest_files=["res://.godot/imported/Milk_Cartons (16 x 16).png-0e7e869cc0071424ae793650c7f5addf.ctex"]
 
 [params]
 

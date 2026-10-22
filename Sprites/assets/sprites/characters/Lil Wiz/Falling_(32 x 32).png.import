@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://i7q5wld3dwr3"
-path="res://.godot/imported/Falling_(32 x 32).png-fadf9feb88e8bfc61a6139665e7ac18a.ctex"
+path="res://.godot/imported/Falling_(32 x 32).png-706f410eeb55e388cb7ac21dfccd2260.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/assets/sprites/characters/Lil Wiz/Falling_(32 x 32).png"
-dest_files=["res://.godot/imported/Falling_(32 x 32).png-fadf9feb88e8bfc61a6139665e7ac18a.ctex"]
+source_file="res://Sprites/assets/sprites/characters/Lil Wiz/Falling_(32 x 32).png"
+dest_files=["res://.godot/imported/Falling_(32 x 32).png-706f410eeb55e388cb7ac21dfccd2260.ctex"]
 
 [params]
 

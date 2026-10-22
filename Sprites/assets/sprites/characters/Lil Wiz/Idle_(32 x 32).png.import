@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b00bdj6ntmfkw"
-path="res://.godot/imported/Idle_(32 x 32).png-1ebd60aaf146e89c8bec492443e2b3a5.ctex"
+path="res://.godot/imported/Idle_(32 x 32).png-9d997a8522953d889e1967322b795a67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/assets/sprites/characters/Lil Wiz/Idle_(32 x 32).png"
-dest_files=["res://.godot/imported/Idle_(32 x 32).png-1ebd60aaf146e89c8bec492443e2b3a5.ctex"]
+source_file="res://Sprites/assets/sprites/characters/Lil Wiz/Idle_(32 x 32).png"
+dest_files=["res://.godot/imported/Idle_(32 x 32).png-9d997a8522953d889e1967322b795a67.ctex"]
 
 [params]
 
