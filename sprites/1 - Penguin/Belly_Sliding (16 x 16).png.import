@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://leta6poshxgs"
-path="res://.godot/imported/Belly_Sliding (16 x 16).png-131d913c20d930875408c1b736d0672e.ctex"
+path="res://.godot/imported/Belly_Sliding (16 x 16).png-d84544d3d87a8d4bb5a0c052c5506e8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/1 - Penguin/Belly_Sliding (16 x 16).png"
-dest_files=["res://.godot/imported/Belly_Sliding (16 x 16).png-131d913c20d930875408c1b736d0672e.ctex"]
+source_file="res://Sprites/1 - Penguin/Belly_Sliding (16 x 16).png"
+dest_files=["res://.godot/imported/Belly_Sliding (16 x 16).png-d84544d3d87a8d4bb5a0c052c5506e8d.ctex"]
 
 [params]
 
