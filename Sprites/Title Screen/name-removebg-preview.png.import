@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://neemix7evyrn"
-path="res://.godot/imported/name-removebg-preview.png-5d13bc0d3b33005d8060e09d6d2b0488.ctex"
+path="res://.godot/imported/name-removebg-preview.png-75b93139a4ebab616fda6b91503b5a53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Title Screen/name-removebg-preview.png"
-dest_files=["res://.godot/imported/name-removebg-preview.png-5d13bc0d3b33005d8060e09d6d2b0488.ctex"]
+source_file="res://Sprites/Title Screen/name-removebg-preview.png"
+dest_files=["res://.godot/imported/name-removebg-preview.png-75b93139a4ebab616fda6b91503b5a53.ctex"]
 
 [params]
 
