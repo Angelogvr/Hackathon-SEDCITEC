@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://br0xnw5w67qob"
-path="res://.godot/imported/Salad_Bowl (16 x 16).png-21c98f1ffcb9ac9e5621bec180d0f202.ctex"
+path="res://.godot/imported/Salad_Bowl (16 x 16).png-ff70026d2911a0b1c73b396ad24a3638.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Food Items/Salad_Bowl (16 x 16).png"
-dest_files=["res://.godot/imported/Salad_Bowl (16 x 16).png-21c98f1ffcb9ac9e5621bec180d0f202.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Food Items/Salad_Bowl (16 x 16).png"
+dest_files=["res://.godot/imported/Salad_Bowl (16 x 16).png-ff70026d2911a0b1c73b396ad24a3638.ctex"]
 
 [params]
 

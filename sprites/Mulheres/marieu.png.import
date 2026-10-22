@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyixhwua3041a"
-path="res://.godot/imported/marieu.png-a458cb3825b0cee180ca03ba51917b1f.ctex"
+uid="uid://brrukyqlcpitd"
+path="res://.godot/imported/marieu.png-a714aab3e5d42e2b62a573644c32ade3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/marieu.png"
-dest_files=["res://.godot/imported/marieu.png-a458cb3825b0cee180ca03ba51917b1f.ctex"]
+source_file="res://sprites/Mulheres/marieu.png"
+dest_files=["res://.godot/imported/marieu.png-a714aab3e5d42e2b62a573644c32ade3.ctex"]
 
 [params]
 

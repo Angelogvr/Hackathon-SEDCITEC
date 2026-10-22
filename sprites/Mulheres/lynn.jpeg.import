@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpap03umrqtj2"
-path="res://.godot/imported/ada.png-8a9dc6432dc912caf7bc8a3cff4e3d8e.ctex"
+uid="uid://dqq363p3ui46p"
+path="res://.godot/imported/lynn.jpeg-fbe2b8923d5569a82d1492859d895336.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ada.png"
-dest_files=["res://.godot/imported/ada.png-8a9dc6432dc912caf7bc8a3cff4e3d8e.ctex"]
+source_file="res://sprites/Mulheres/lynn.jpeg"
+dest_files=["res://.godot/imported/lynn.jpeg-fbe2b8923d5569a82d1492859d895336.ctex"]
 
 [params]
 

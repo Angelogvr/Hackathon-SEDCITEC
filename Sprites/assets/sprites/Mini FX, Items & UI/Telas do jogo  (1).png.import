@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clk8gin21n0wh"
-path="res://.godot/imported/Telas do jogo  (1).png-98da7d652ee60329312588b965b061ef.ctex"
+path="res://.godot/imported/Telas do jogo  (1).png-0d796a404f4960215cfe05a69acf027f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Telas do jogo  (1).png"
-dest_files=["res://.godot/imported/Telas do jogo  (1).png-98da7d652ee60329312588b965b061ef.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Telas do jogo  (1).png"
+dest_files=["res://.godot/imported/Telas do jogo  (1).png-0d796a404f4960215cfe05a69acf027f.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0yb8n0udhiag"
-path="res://.godot/imported/Explosion_Poof (16 x 16).png-7c6c400c39def25cf8048f4bbe4b8aea.ctex"
+path="res://.godot/imported/Explosion_Poof (16 x 16).png-0e4210a5ba4101b1eb502f04357346d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Effects/Explosion_Poof (16 x 16).png"
-dest_files=["res://.godot/imported/Explosion_Poof (16 x 16).png-7c6c400c39def25cf8048f4bbe4b8aea.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Effects/Explosion_Poof (16 x 16).png"
+dest_files=["res://.godot/imported/Explosion_Poof (16 x 16).png-0e4210a5ba4101b1eb502f04357346d3.ctex"]
 
 [params]
 

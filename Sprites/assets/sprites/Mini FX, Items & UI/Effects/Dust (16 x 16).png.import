@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://te3octl07eqb"
-path="res://.godot/imported/Dust (16 x 16).png-bb94dbe15522611edbaec8581b008b24.ctex"
+path="res://.godot/imported/Dust (16 x 16).png-f57308a194f656a5f08a567737af9775.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Effects/Dust (16 x 16).png"
-dest_files=["res://.godot/imported/Dust (16 x 16).png-bb94dbe15522611edbaec8581b008b24.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Effects/Dust (16 x 16).png"
+dest_files=["res://.godot/imported/Dust (16 x 16).png-f57308a194f656a5f08a567737af9775.ctex"]
 
 [params]
 

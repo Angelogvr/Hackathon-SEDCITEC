@@ -5,10 +5,9 @@ class_name Level
 @export var dialogos: Array
 @export var faceset: Array
 @export var tittle: Array
-
 @export_category("Objects")
 @export var _hud: CanvasLayer = null
-
+@export_file("*.txt") var caminho_biografia: String = "res://biografias/jaqueline.txt"
 @onready var animacao_botao_f: AnimatedSprite2D = $animacao_botaoF
 
 
@@ -31,6 +30,7 @@ func _ready() -> void:
 		_PERSONAGEM = dialogos[0]
 	else:
 		_PERSONAGEM = "Você é um aviso que deve avisar para o jogador tentar novamente conversar com voce. Responda sempre em português de forma curta."
+	_carregar_biografia()
 	_campo = LineEdit.new()
 	_campo.placeholder_text = "Fale com o quadro e aperte Enter..."
 	_campo.custom_minimum_size = Vector2(500, 40)
@@ -46,10 +46,15 @@ func _process(_delta: float) -> void:
 	if not is_instance_valid(target):
 		return
 
-	if abs(target.position.x - position.x) < 70 and not target.interacting:
+	if abs(target.position.x - position.x) < 70:
 		botaoAtivo = true
 	else:
 		botaoAtivo = false
+
+	# Fecha o diálogo quando o jogador se afasta
+	if not botaoAtivo and is_instance_valid(_dialogo_ativo):
+		_dialogo_ativo.queue_free()
+		_dialogo_ativo = null
 
 	show_button()
 	_dialogo()
@@ -57,6 +62,7 @@ func _process(_delta: float) -> void:
 
 func _dialogo() -> void:
 	var f_apertou := Input.is_action_just_pressed("interact")
+	
 
 	if botaoAtivo and f_apertou and not is_instance_valid(_dialogo_ativo) and not _esperando_ia and not _campo.visible:
 		var tela := get_viewport().get_visible_rect().size
@@ -114,8 +120,8 @@ func _perguntar_ia() -> void:
 		"keep_alive": -1,
 		"messages": mensagens,
 		"options": {
-			"num_predict": 60,
-			"num_ctx": 1024,
+			"num_predict": 256,
+			"num_ctx": 8192,
 			"temperature": 0.6
 		}
 	}
@@ -304,9 +310,6 @@ func _perguntar_ia() -> void:
 	if is_instance_valid(_dialogo_ativo):
 		_dialogo_ativo.finalizar_stream()
 
-	print("Resposta final da Lyn: ", fala)
-
-
 func _erro_stream(cliente: HTTPClient, mensagem: String) -> void:
 	cliente.close()
 
@@ -358,6 +361,50 @@ func _precarregar_ia() -> void:
 		aquecimento.queue_free()
 
 
+func _carregar_biografia() -> void:
+	if caminho_biografia.is_empty():
+		push_warning("Nenhuma biografia configurada.")
+		return
+
+	if not FileAccess.file_exists(caminho_biografia):
+		push_warning("Biografia não encontrada: " + caminho_biografia)
+		return
+
+	var biografia: String = FileAccess.get_file_as_string(
+		caminho_biografia
+	).strip_edges()
+
+	if biografia.is_empty():
+		push_warning("O arquivo da biografia está vazio.")
+		return
+
+	var nome: String = "personagem"
+
+	if tittle.size() > 0:
+		nome = str(tittle[0])
+
+	_PERSONAGEM += """
+
+Você está interpretando %s em uma simulação interativa.
+
+REGRAS:
+- Responda em primeira pessoa, como o personagem.
+- Utilize a biografia como fonte principal de informações.
+- Responda sempre em português.
+- Mantenha a personalidade descrita.
+- Se perguntarem sobre sua vida, consulte os fatos da biografia.
+- Não invente acontecimentos, datas ou informações biográficas.
+- Se não houver informação suficiente, admita que não sabe.
+- Não confunda acontecimentos do jogador com sua própria história.
+- Responda de forma natural, como uma conversa.
+
+BIOGRAFIA DO PERSONAGEM:
+%s
+""" % [nome, biografia]
+
+	print("Biografia carregada: ", caminho_biografia)
+
+
 func get_target() -> void:
 	var nodes = get_tree().get_nodes_in_group("Player")
 
@@ -369,7 +416,7 @@ func get_target() -> void:
 
 
 func show_button() -> void:
-	if botaoAtivo:
+	if botaoAtivo and not target.interacting:
 		animacao_botao_f.visible = true
 		animacao_botao_f.play()
 	else:

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clf3twh8sbjji"
-path="res://.godot/imported/Sparkles_(8 x 8).png-fd0edb2a822f159b0f1263b504629688.ctex"
+path="res://.godot/imported/Sparkles_(8 x 8).png-93e09054be6ed134ea779fe68accaef5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/characters/Lil Wiz/Sparkles_(8 x 8).png"
-dest_files=["res://.godot/imported/Sparkles_(8 x 8).png-fd0edb2a822f159b0f1263b504629688.ctex"]
+source_file="res://sprites/assets/sprites/characters/Lil Wiz/Sparkles_(8 x 8).png"
+dest_files=["res://.godot/imported/Sparkles_(8 x 8).png-93e09054be6ed134ea779fe68accaef5.ctex"]
 
 [params]
 
