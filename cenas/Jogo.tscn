@@ -3,12 +3,20 @@
 [ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://Sprites/spr_cenario.png" id="1_ex3y1"]
 [ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://Sprites/lynn.jpeg" id="2_3cynk"]
 [ext_resource type="PackedScene" uid="uid://uvmflm2scmx3" path="res://entidades/mulher.tscn" id="2_ex3y1"]
+[ext_resource type="Texture2D" uid="uid://d2ycnqufde487" path="res://New folder/porta_anim_00.png" id="2_sngbk"]
 [ext_resource type="Texture2D" uid="uid://cyixhwua3041a" path="res://Sprites/marieu.png" id="3_3cynk"]
+[ext_resource type="Texture2D" uid="uid://c6e0tqyub4nuc" path="res://New folder/porta_anim_01.png" id="3_6cw58"]
 [ext_resource type="Texture2D" uid="uid://dpap03umrqtj2" path="res://Sprites/ada.png" id="4_4budo"]
+[ext_resource type="Texture2D" uid="uid://foab1hgglo8d" path="res://New folder/porta_anim_02.png" id="4_xk38k"]
 [ext_resource type="PackedScene" uid="uid://c6e8gefihjl6w" path="res://entidades/camera.tscn" id="5_3cynk"]
+[ext_resource type="Texture2D" uid="uid://fekxkkb2fny6" path="res://New folder/porta_anim_03.png" id="5_b8gxm"]
 [ext_resource type="PackedScene" uid="uid://kpyrhnjd2dmb" path="res://entidades/player.tscn" id="5_thifo"]
+[ext_resource type="Texture2D" uid="uid://dqs2hswgh0icw" path="res://New folder/porta_anim_04.png" id="6_d4u82"]
+[ext_resource type="Texture2D" uid="uid://dkxssy584txhy" path="res://New folder/porta_anim_05.png" id="7_mg164"]
+[ext_resource type="Texture2D" uid="uid://cspvi4lvvxjhq" path="res://New folder/porta_anim_06.png" id="8_8jxlo"]
 [ext_resource type="PackedScene" uid="uid://c75cuatlea35f" path="res://entidades/pause_menu.tscn" id="9_2yyff"]
-[ext_resource type="Texture2D" uid="uid://dcl402vet74kv" path="res://Sprites/Porta_Fechada.png" id="9_kofog"]
+[ext_resource type="Texture2D" uid="uid://bh1jgexo4tfa0" path="res://New folder/porta_anim_07.png" id="9_lav87"]
+[ext_resource type="Texture2D" uid="uid://nlgnmgrirov8" path="res://New folder/porta_anim_08.png" id="10_wxt3f"]
 
 [sub_resource type="GDScript" id="GDScript_0b3n2"]
 script/source = "extends Node2D
@@ -35,9 +43,86 @@ size = Vector2(1005.5, 67.5)
 a = Vector2(125, 175)
 b = Vector2(123, -25)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqyfw"]
+atlas = ExtResource("2_sngbk")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_figqi"]
+atlas = ExtResource("3_6cw58")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnjig"]
+atlas = ExtResource("4_xk38k")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2coaf"]
+atlas = ExtResource("5_b8gxm")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klr2p"]
+atlas = ExtResource("6_d4u82")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdn01"]
+atlas = ExtResource("7_mg164")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyrs6"]
+atlas = ExtResource("8_8jxlo")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2sog"]
+atlas = ExtResource("9_lav87")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fgld"]
+atlas = ExtResource("10_wxt3f")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wvhbo"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqyfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_figqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnjig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2coaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klr2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdn01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyrs6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2sog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fgld")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 8.0
+}]
+
 [node name="Game" type="Node2D" unique_id=1184867715]
 process_mode = 1
 script = SubResource("GDScript_0b3n2")
+metadata/_edit_horizontal_guides_ = [-62.0]
 
 [node name="Background" type="Node2D" parent="." unique_id=1181801678]
 
@@ -52,18 +137,20 @@ position = Vector2(-125, 31)
 shape = SubResource("SegmentShape2D_k1af1")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Background/Colisores" unique_id=1331817857]
-position = Vector2(842, 18)
+position = Vector2(822, -2)
 shape = SubResource("SegmentShape2D_k1af1")
 
 [node name="SprCenario" type="Sprite2D" parent="Background" unique_id=577919580]
+visible = false
 position = Vector2(502.99997, 89.31249)
 scale = Vector2(0.46267837, 0.49257594)
 texture = ExtResource("1_ex3y1")
 
-[node name="GeminiGeneratedImage1Mz21Mz21Mz21Mz21RemovebgPreview" type="Sprite2D" parent="Background" unique_id=2139006559]
-position = Vector2(952, 46)
-scale = Vector2(0.7218245, 0.90763885)
-texture = ExtResource("9_kofog")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background" unique_id=816509263]
+position = Vector2(952.81256, 70.281265)
+scale = Vector2(0.36418295, 0.40465912)
+sprite_frames = SubResource("SpriteFrames_wvhbo")
+animation = &"new_animation"
 
 [node name="mulheres" type="Node2D" parent="." unique_id=376752827]
 
