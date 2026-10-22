@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://daugmjtoon8cy"
-path="res://.godot/imported/jaqueline.png-06c7c8d84ff7d51f93477584475e9152.ctex"
+path="res://.godot/imported/jaqueline.png-739ba587528a8a8225977af886e85408.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Mulheres/jaqueline.png"
-dest_files=["res://.godot/imported/jaqueline.png-06c7c8d84ff7d51f93477584475e9152.ctex"]
+source_file="res://sprites/Mulheres/jaqueline.png"
+dest_files=["res://.godot/imported/jaqueline.png-739ba587528a8a8225977af886e85408.ctex"]
 
 [params]
 

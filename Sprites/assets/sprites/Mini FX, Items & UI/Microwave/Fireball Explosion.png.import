@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1xd0mgl6mkpq"
-path="res://.godot/imported/Fireball Explosion.png-41e67b67ff9a0ddad7341a75647b64d3.ctex"
+path="res://.godot/imported/Fireball Explosion.png-2855a868ea1d49f4e8bab456fc09a7c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Microwave/Fireball Explosion.png"
-dest_files=["res://.godot/imported/Fireball Explosion.png-41e67b67ff9a0ddad7341a75647b64d3.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Microwave/Fireball Explosion.png"
+dest_files=["res://.godot/imported/Fireball Explosion.png-2855a868ea1d49f4e8bab456fc09a7c0.ctex"]
 
 [params]
 

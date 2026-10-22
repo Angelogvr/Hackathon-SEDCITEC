@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://biaqj335612xm"
-path="res://.godot/imported/Hurt (32 x 32).png-db22fff453b0a85f08e7f176e46dbe2f.ctex"
+path="res://.godot/imported/Hurt (32 x 32).png-1234fb6b196b3868d118b0e0a1d21d45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Personagem/2 - Holly/Hurt (32 x 32).png"
-dest_files=["res://.godot/imported/Hurt (32 x 32).png-db22fff453b0a85f08e7f176e46dbe2f.ctex"]
+source_file="res://sprites/Personagem/2 - Holly/Hurt (32 x 32).png"
+dest_files=["res://.godot/imported/Hurt (32 x 32).png-1234fb6b196b3868d118b0e0a1d21d45.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pco25sxos00w"
-path="res://.godot/imported/Ice_Cream_Cones (16 x 16).png-37591d3312468d1170e091b3f852faeb.ctex"
+path="res://.godot/imported/Ice_Cream_Cones (16 x 16).png-e7c42f363d3d993656df1b715ff3a54a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Food Items/Ice_Cream_Cones (16 x 16).png"
-dest_files=["res://.godot/imported/Ice_Cream_Cones (16 x 16).png-37591d3312468d1170e091b3f852faeb.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Food Items/Ice_Cream_Cones (16 x 16).png"
+dest_files=["res://.godot/imported/Ice_Cream_Cones (16 x 16).png-e7c42f363d3d993656df1b715ff3a54a.ctex"]
 
 [params]
 

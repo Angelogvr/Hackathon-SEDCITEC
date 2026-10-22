@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://m7v5rj5lyb8b"
-path="res://.godot/imported/Fireball loop.png-f94778d08de382bacccf76985b37624b.ctex"
+path="res://.godot/imported/Fireball loop.png-bcc330f63508b96cceacd5b03e395403.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Microwave/Fireball loop.png"
-dest_files=["res://.godot/imported/Fireball loop.png-f94778d08de382bacccf76985b37624b.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Microwave/Fireball loop.png"
+dest_files=["res://.godot/imported/Fireball loop.png-bcc330f63508b96cceacd5b03e395403.ctex"]
 
 [params]
 

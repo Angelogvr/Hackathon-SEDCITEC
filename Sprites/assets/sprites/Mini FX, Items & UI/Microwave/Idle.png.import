@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dj3ctqyh4gt0k"
-path="res://.godot/imported/Idle.png-0ebb1d37dd4e2553cea6931bf38735a9.ctex"
+path="res://.godot/imported/Idle.png-fd82e5af6dd3021721226fcb768a6591.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Microwave/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-0ebb1d37dd4e2553cea6931bf38735a9.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Microwave/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-fd82e5af6dd3021721226fcb768a6591.ctex"]
 
 [params]
 
