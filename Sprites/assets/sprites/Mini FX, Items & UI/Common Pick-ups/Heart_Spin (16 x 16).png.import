@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3vefgknjys21"
-path="res://.godot/imported/Heart_Spin (16 x 16).png-d956ae8202adee214b5e9ad285dfd229.ctex"
+path="res://.godot/imported/Heart_Spin (16 x 16).png-4ae16d1bc5d52452cee307564c2c562c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Common Pick-ups/Heart_Spin (16 x 16).png"
-dest_files=["res://.godot/imported/Heart_Spin (16 x 16).png-d956ae8202adee214b5e9ad285dfd229.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Common Pick-ups/Heart_Spin (16 x 16).png"
+dest_files=["res://.godot/imported/Heart_Spin (16 x 16).png-4ae16d1bc5d52452cee307564c2c562c.ctex"]
 
 [params]
 

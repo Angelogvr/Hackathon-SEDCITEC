@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wx6mepl46s1d"
-path="res://.godot/imported/Death.png-d845dbda3fd0a637d34ee62b23ad7019.ctex"
+path="res://.godot/imported/Death.png-b253e321cdb6647efdb2a79f445e9360.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Bulldozer/Death.png"
-dest_files=["res://.godot/imported/Death.png-d845dbda3fd0a637d34ee62b23ad7019.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Bulldozer/Death.png"
+dest_files=["res://.godot/imported/Death.png-b253e321cdb6647efdb2a79f445e9360.ctex"]
 
 [params]
 

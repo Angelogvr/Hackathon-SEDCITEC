@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bry4j6wwqk286"
-path="res://.godot/imported/All.png-02dd238c783d05ca8d24a69402da66f5.ctex"
+path="res://.godot/imported/All.png-197472a98483a7d47f72c2fd17d0e3d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Microwave/All.png"
-dest_files=["res://.godot/imported/All.png-02dd238c783d05ca8d24a69402da66f5.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Microwave/All.png"
+dest_files=["res://.godot/imported/All.png-197472a98483a7d47f72c2fd17d0e3d2.ctex"]
 
 [params]
 

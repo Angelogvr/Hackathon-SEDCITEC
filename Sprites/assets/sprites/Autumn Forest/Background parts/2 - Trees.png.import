@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqvku7bcx5ug6"
-path="res://.godot/imported/2 - Trees.png-0cb46c735d8a15aaa8ec226118590b31.ctex"
+path="res://.godot/imported/2 - Trees.png-239d1e7b47a1f3fc457b8ca1786283f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Autumn Forest/Background parts/2 - Trees.png"
-dest_files=["res://.godot/imported/2 - Trees.png-0cb46c735d8a15aaa8ec226118590b31.ctex"]
+source_file="res://sprites/assets/sprites/Autumn Forest/Background parts/2 - Trees.png"
+dest_files=["res://.godot/imported/2 - Trees.png-239d1e7b47a1f3fc457b8ca1786283f9.ctex"]
 
 [params]
 

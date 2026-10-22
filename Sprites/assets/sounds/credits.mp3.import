@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bc4whgax240q"
-path="res://.godot/imported/credits.mp3-5c0a8e3ce8b7fa9431f7b619f633570e.mp3str"
+path="res://.godot/imported/credits.mp3-e29b04b60923b09df8079c141e257642.mp3str"
 
 [deps]
 
-source_file="res://Sprites/assets/sounds/credits.mp3"
-dest_files=["res://.godot/imported/credits.mp3-5c0a8e3ce8b7fa9431f7b619f633570e.mp3str"]
+source_file="res://sprites/assets/sounds/credits.mp3"
+dest_files=["res://.godot/imported/credits.mp3-e29b04b60923b09df8079c141e257642.mp3str"]
 
 [params]
 

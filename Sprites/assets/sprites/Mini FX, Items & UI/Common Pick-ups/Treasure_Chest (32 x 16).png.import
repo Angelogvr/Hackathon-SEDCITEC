@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyolph5gokl4b"
-path="res://.godot/imported/Treasure_Chest (32 x 16).png-4b027486f49b9e89f1df566872d9f118.ctex"
+path="res://.godot/imported/Treasure_Chest (32 x 16).png-dc3c4612f895837c7bc521f89505c9b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Common Pick-ups/Treasure_Chest (32 x 16).png"
-dest_files=["res://.godot/imported/Treasure_Chest (32 x 16).png-4b027486f49b9e89f1df566872d9f118.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Common Pick-ups/Treasure_Chest (32 x 16).png"
+dest_files=["res://.godot/imported/Treasure_Chest (32 x 16).png-dc3c4612f895837c7bc521f89505c9b8.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dlpe4u2e7ckvu"
-path="res://.godot/imported/AnekLatin-VariableFont_wdth,wght.ttf-0c6ddda9f957fec4ec0490a775ae36bb.fontdata"
+path="res://.godot/imported/AnekLatin-VariableFont_wdth,wght.ttf-d815848d4872547cd1ddcb3d826b21a3.fontdata"
 
 [deps]
 
-source_file="res://Sprites/extras/AnekLatin-VariableFont_wdth,wght.ttf"
-dest_files=["res://.godot/imported/AnekLatin-VariableFont_wdth,wght.ttf-0c6ddda9f957fec4ec0490a775ae36bb.fontdata"]
+source_file="res://sprites/extras/AnekLatin-VariableFont_wdth,wght.ttf"
+dest_files=["res://.godot/imported/AnekLatin-VariableFont_wdth,wght.ttf-d815848d4872547cd1ddcb3d826b21a3.fontdata"]
 
 [params]
 

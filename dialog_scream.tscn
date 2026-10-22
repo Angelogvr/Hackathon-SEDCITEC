@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://2roahr3knjvb"]
 
-[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://Sprites/lynn.jpeg" id="1_lo876"]
+[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://sprites/Mulheres/lynn.jpeg" id="1_lo876"]
+
 
 [sub_resource type="LabelSettings" id="LabelSettings_wvhbo"]
 shadow_color = Color(0, 0, 0, 0.6)

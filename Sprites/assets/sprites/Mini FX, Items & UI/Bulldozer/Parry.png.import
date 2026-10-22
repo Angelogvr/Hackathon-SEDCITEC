@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r3voo7e0n632"
-path="res://.godot/imported/Parry.png-2f343c4f639c1a54ed653593e76ac169.ctex"
+path="res://.godot/imported/Parry.png-cae39099f51d044ff415fc4dfdd7b068.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Bulldozer/Parry.png"
-dest_files=["res://.godot/imported/Parry.png-2f343c4f639c1a54ed653593e76ac169.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Bulldozer/Parry.png"
+dest_files=["res://.godot/imported/Parry.png-cae39099f51d044ff415fc4dfdd7b068.ctex"]
 
 [params]
 
