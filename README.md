@@ -18,4 +18,9 @@ Mulheres que Inspiram é uma plataforma gamificada desenvolvida para transformar
 ![GODOT Engine](https://img.shields.io/badge/Godot%20Engine-478CBF?logo=godotengine&logoColor=fff&style=flat) ![Ollama AI](https://img.shields.io/badge/-Ollama-000000?style=flat&logo=ollama&logoColor=white) ![Itch.io](https://img.shields.io/badge/itch.io-%23FF0B34.svg?logo=Itch.io&logoColor=white)
 
 
-
+### Instalar Modelo de IA:
+Baixar o modelo llama3.2.
+Abra o Prompt de Comando e rode:
+ollama pull llama3.2.
+Espere o download terminar. Para conferir, abra http://localhost:11434 no navegador: deve aparecer "Ollama is running".
+Deixe o Ollama aberto em segundo plano enquanto executa o programa.
