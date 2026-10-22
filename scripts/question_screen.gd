@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 signal question_answered(is_correct: bool)
+signal quiz_finished(final_score: int) # Novo sinal para quando o quiz acabar
 
 @onready var question_label: Label = $Control/background/question_label
 @onready var btn_1: Button = $Control/background/VBoxContainer/btn_1
@@ -11,46 +12,58 @@ signal question_answered(is_correct: bool)
 
 var current_question_index = 0
 var correct_answer_index = 0
+var score = 0
+var is_showing_results = false # Controla se estamos na tela final de pontuação
 
 var questions = [
 	{
-		"text": "1. Converta 00011101 para hexadecimal.",
-		"options": ["A) 1D", "B) 1E", "C) F4", "D) EA"],
-		"correct": 0 
+		"text": "1. Qual o apelido que Ada Lovelace recebeu pelas suas descobertas?",
+		"options": ["A) Rainha da matemática", "B) Mãe da programação", "C) Mestre dos algoritmos", "D) Princesa dos Paralelogramos"],
+		"correct": 1
 	},
 	{
-		"text": "2. Qual o resultado de 1001 AND 1111?",
-		"options": ["A) 1000", "B) 1100", "C) 1001", "D) 0011"],
-		"correct": 2
-	},
-	{
-		"text": "3. O barramento de dados é:",
-		"options": ["Unidirecional", "De controle", "De endereço.", "Bidirecional."],
-		"correct": 3
-	},
-	{
-		"text": "4. O que o contador de programa (PC) armazena?",
-		"options": ["O endereço da próxima instrução.", "Os dados da memória", "O resultado da ULA.", "A instrução atual."],
+		"text": "2. Em quais áreas Marie Curie recebeu prêmios Nobel?",
+		"options": ["A) Física e Química", "B) Química e Biologia", "C) Física e Matemática", "D) Biologia e Medicina"],
 		"correct": 0
 	},
 	{
-		"text": "5. Qual o tipo de acesso da instrução STA:",
-		"options": ["MEM(end) ← PC", "AC ← MEM(end)", "MEM(end) ← AC", "AC ← AC + MEM(end)"],
-		"correct": 2
+		"text": "3. Apesar dos grandes avanços promovidos por Lynn, ela não recebeu seu devido reconhecimento e foi demitida pois:",
+		"options": ["Começou sua transição de gênero", "Matou colegas de trabalho", "Roubou senhorinhas no parque", "Espalhou informações confidenciais"],
+		"correct": 0
+	},
+	{
+		"text": "4. Além do sequenciamento do genoma do coronavírus, quais outros vírus Jaqueline pesquisou?",
+		"options": ["Zika vírus", "Dengue", "HIV", "Todos os anteriores"],
+		"correct": 3
 	}
 ]
 
 func _ready():
 	hide()
 		
-	btn_1.pressed.connect(func(): check_answer(0))
-	btn_2.pressed.connect(func(): check_answer(1))
-	btn_3.pressed.connect(func(): check_answer(2))
-	btn_4.pressed.connect(func(): check_answer(3))
+	btn_1.pressed.connect(func(): _on_button_pressed(0))
+	btn_2.pressed.connect(func(): _on_button_pressed(1))
+	btn_3.pressed.connect(func(): _on_button_pressed(2))
+	btn_4.pressed.connect(func(): _on_button_pressed(3))
 
+# Chame esta função pelo script do Jogo quando o jogador tocar na Area2D
 func show_question():
 	get_tree().paused = true 
-		
+	current_question_index = 0
+	score = 0
+	is_showing_results = false
+	
+	# Garante que todos os botões estejam visíveis ao iniciar o quiz
+	btn_1.show()
+	btn_2.show()
+	btn_3.show()
+	btn_4.show()
+	
+	show()
+	question.play()
+	load_current_question()
+
+func load_current_question():
 	if current_question_index < questions.size():
 		var q = questions[current_question_index]
 		question_label.text = q["text"]
@@ -59,21 +72,39 @@ func show_question():
 		btn_3.text = q["options"][2]
 		btn_4.text = q["options"][3]
 		correct_answer_index = q["correct"]
-		show()
-		question.play()
 	else:
-		get_tree().paused = false
+		show_results()
 
-func check_answer(index: int):
-	hide()
-	question.stop()
-	get_tree().paused = false 
-	
+func _on_button_pressed(index: int):
+	# Se já estiver na tela de pontuação, clicar no botão 1 fecha o quiz
+	if is_showing_results:
+		close_quiz()
+		return
+		
 	if index == correct_answer_index:
 		print("Acertou!")
-		current_question_index += 1 
+		score += 1
 		emit_signal("question_answered", true)
 	else:
 		print("Errou! O Boss vai recuperar vida.")
-
 		emit_signal("question_answered", false)
+	
+	# Avança para a próxima pergunta (acertando ou errando) e atualiza a tela
+	current_question_index += 1
+	load_current_question()
+
+func show_results():
+	is_showing_results = true
+	question_label.text = "Quiz finalizado!\nSua pontuação: %d de %d" % [score, questions.size()]
+	
+	# Transforma o btn_1 no botão de "Continuar" e esconde os demais
+	btn_1.text = "Continuar"
+	btn_2.hide()
+	btn_3.hide()
+	btn_4.hide()
+
+func close_quiz():
+	hide()
+	question.stop()
+	get_tree().paused = false
+	emit_signal("quiz_finished", score)

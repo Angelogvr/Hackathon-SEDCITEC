@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bmhnch0nljeul"]
 
-[ext_resource type="Script" uid="uid://u3rcl3f11sk1" path="res://scripts/question_screen.gd" id="1_71ca1"]
-[ext_resource type="Texture2D" uid="uid://cfoyytod0v0rh" path="res://assets/sprites/Mini FX, Items & UI/Mini UI/parchment.png" id="1_tkw60"]
-[ext_resource type="FontFile" uid="uid://bnlvdooq8e1gd" path="res://extras/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="2_71ca1"]
-[ext_resource type="AudioStream" uid="uid://bri7bf75j0qwl" path="res://assets/sounds/question.mp3" id="4_h5onr"]
+[ext_resource type="Script" uid="uid://bypxymmmjipff" path="res://scripts/question_screen.gd" id="1_71ca1"]
+[ext_resource type="Texture2D" uid="uid://cfoyytod0v0rh" path="res://Sprites/assets/sprites/Mini FX, Items & UI/Mini UI/parchment.png" id="1_tkw60"]
+[ext_resource type="FontFile" uid="uid://bnlvdooq8e1gd" path="res://Sprites/extras/BitcountSingle-VariableFont_CRSV,ELSH,ELXP,slnt,wght.ttf" id="2_71ca1"]
+[ext_resource type="AudioStream" uid="uid://bri7bf75j0qwl" path="res://Sprites/assets/sounds/question.mp3" id="4_h5onr"]
 
 [node name="question_screen" type="CanvasLayer" unique_id=513991955]
 process_mode = 3
@@ -33,53 +33,57 @@ anchor_left = 0.50200003
 anchor_top = 0.5
 anchor_right = 0.50200003
 anchor_bottom = 0.5
-offset_left = -259.68002
-offset_top = -217.0
-offset_right = 252.31998
-offset_bottom = 295.0
+offset_left = -119.000015
+offset_top = -125.0
+offset_right = 140.67998
+offset_bottom = 141.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_tkw60")
+expand_mode = 1
 
 [node name="question_label" type="Label" parent="Control/background" unique_id=708246223]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.208
 anchor_bottom = 0.164
-offset_left = 132.0
-offset_top = 112.0
-offset_right = 304.504
-offset_bottom = 71.032
+offset_left = 47.0
+offset_top = 59.0
+offset_right = 164.50398
+offset_bottom = 96.376
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_71ca1")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 10
 text = " O que é o contador de programa (PC)?"
 horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/background" unique_id=1414916055]
 layout_mode = 0
-offset_left = 116.0
-offset_top = 245.0
-offset_right = 407.0
+offset_left = 56.0
+offset_top = 137.0
+offset_right = 209.0
 offset_bottom = 377.0
 
 [node name="btn_1" type="Button" parent="Control/background/VBoxContainer" unique_id=576533262]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_71ca1")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 6
 
 [node name="btn_2" type="Button" parent="Control/background/VBoxContainer" unique_id=1657984304]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_71ca1")
+theme_override_font_sizes/font_size = 6
 
 [node name="btn_3" type="Button" parent="Control/background/VBoxContainer" unique_id=109946385]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_71ca1")
+theme_override_font_sizes/font_size = 6
 
 [node name="btn_4" type="Button" parent="Control/background/VBoxContainer" unique_id=1268433189]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_71ca1")
+theme_override_font_sizes/font_size = 6
 
 [node name="question" type="AudioStreamPlayer" parent="." unique_id=2108059115]
 stream = ExtResource("4_h5onr")

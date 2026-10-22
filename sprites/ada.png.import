@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpap03umrqtj2"
-path="res://.godot/imported/ada.png-f81531afbb1bb525c615bd3634c1000e.ctex"
+path="res://.godot/imported/ada.png-8a9dc6432dc912caf7bc8a3cff4e3d8e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/ada.png"
-dest_files=["res://.godot/imported/ada.png-f81531afbb1bb525c615bd3634c1000e.ctex"]
+source_file="res://Sprites/ada.png"
+dest_files=["res://.godot/imported/ada.png-8a9dc6432dc912caf7bc8a3cff4e3d8e.ctex"]
 
 [params]
 

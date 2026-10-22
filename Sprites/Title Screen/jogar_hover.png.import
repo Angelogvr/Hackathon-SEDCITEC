@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1ph1j7lsym4r"
-path="res://.godot/imported/jogar_hover.png-30aa0604be71f3bbffd95adfab1fc542.ctex"
+path="res://.godot/imported/jogar_hover.png-d8dc62571a1ec14ce0073b105beee2dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Title Screen/jogar_hover.png"
-dest_files=["res://.godot/imported/jogar_hover.png-30aa0604be71f3bbffd95adfab1fc542.ctex"]
+source_file="res://Sprites/Title Screen/jogar_hover.png"
+dest_files=["res://.godot/imported/jogar_hover.png-d8dc62571a1ec14ce0073b105beee2dc.ctex"]
 
 [params]
 
