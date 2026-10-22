@@ -1,47 +1,73 @@
 extends ScrollContainer
 
-@export var text_node : Control
-@export_range(1, 10000, 0.1) var credits_time : float = 12.0 # <--- Diminuído para 12s para subir mais rápido!
-@export_range(0, 10000, 0.1) var margin_increment : float = 0.0
+@onready var scroll_container: ScrollContainer = $"."
+@export var text_node: RichTextLabel
 
-@onready var margin : MarginContainer = $MarginContainer
+# Tempo TOTAL da animação, em segundos
+var credits_time: float = 30
+# Espaço antes do primeiro título (0 = começa imediatamente)
+@export_range(0.0, 10000.0, 0.1) var margin_increment: float = 240.0
+
+@onready var margin: MarginContainer = $MarginContainer
+
 
 func _ready() -> void:
+	print("aqui ", credits_time)
 	if not is_instance_valid(margin) or not is_instance_valid(text_node):
-		push_error("Garante que o MarginContainer e o text_node estão atribuídos no Inspector!")
+		push_error("Verifique o MarginContainer e o text_node!")
 		return
 
-	# Aguarda 1 frame para o Godot calcular os tamanhos de tela reais
+	# Configura o texto dos créditos
+	text_node.bbcode_enabled = true
+	text_node.fit_content = true
+	text_node.scroll_active = false
+
+	# Aguarda os tamanhos dos elementos serem calculados
 	await get_tree().process_frame
-	
-	var text_box_size = text_node.size.y
-	var window_size = DisplayServer.window_get_size().y
 
-	# APROXIMAMOS O TEXTO: Dividimos por 3.0 para ele começar mais perto e aparecer quase de imediato
-	var margem_inicial = window_size / 3.0
-	
-	margin.add_theme_constant_override("margin_top", int(margem_inicial + margin_increment))
-	margin.add_theme_constant_override("margin_bottom", int(window_size + margin_increment))
+	# Sem espaço vazio no início
+	margin.add_theme_constant_override(
+		"margin_top",
+		int(margin_increment)
+	)
 
-	# Garante que o scroll comece no ponto 0
+	# Espaço no final para o último texto sair completamente
+	margin.add_theme_constant_override(
+		"margin_bottom",
+		int(size.y)
+	)
+
+	# Aguarda a atualização das margens
+	await get_tree().process_frame
+
+	# Começa no início, com o texto já visível
 	scroll_vertical = 0
 
-	# Ajusta o scroll total necessário
-	var scroll_amount : int = ceil(text_box_size + margem_inicial + window_size + margin_increment)
-	
-	var tween = create_tween()
-	
-	# Movimento contínuo e constante
+	# Calcula a distância REAL disponível para rolagem
+	var barra := get_v_scroll_bar()
+	var distancia_total: float = maxf(
+		0.0,
+		barra.max_value - barra.page
+	)
+
+	if distancia_total <= 0.0:
+		push_warning("Não há conteúdo suficiente para rolar!")
+		return
+
+	# Cria a animação com duração controlada
+	var tween := create_tween()
 	tween.set_trans(Tween.TRANS_LINEAR)
-	
+	tween.set_ease(Tween.EASE_IN_OUT)
+
 	tween.tween_property(
 		self,
 		"scroll_vertical",
-		scroll_amount,
+		int(round(distancia_total)),
 		credits_time
 	)
-	
+
 	tween.finished.connect(_acabou)
+
 
 func _acabou() -> void:
 	print("Créditos concluídos!")
