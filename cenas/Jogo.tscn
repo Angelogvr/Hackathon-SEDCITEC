@@ -215,3 +215,5 @@ offset_bottom = 20.0
 
 [node name="music" type="AudioStreamPlayer" parent="." unique_id=1071413914]
 stream = ExtResource("18_6cw58")
+volume_db = -25.0
+autoplay = true

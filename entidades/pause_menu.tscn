@@ -17,12 +17,24 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 68.0
+offset_top = 25.0
+offset_right = 68.0
+offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i0ga5")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=717751654]
+layout_mode = 0
+offset_left = -155.0
+offset_top = -25.0
+offset_right = 431.0
+offset_bottom = 223.0
+color = Color(0, 0, 0, 0.48235294)
+
 [node name="ContainerPixelArtFundoTransparente" type="Sprite2D" parent="." unique_id=1372010142]
-position = Vector2(68, 70)
+position = Vector2(162, 100)
 scale = Vector2(0.09530386, 0.14676906)
 texture = ExtResource("2_gy246")
 
@@ -52,7 +64,7 @@ texture_normal = ExtResource("4_fxc1p")
 texture_hover = ExtResource("5_4mfpr")
 
 [node name="PixelWoodcraftControlsSign" type="Sprite2D" parent="." unique_id=1628062013]
-position = Vector2(124, 64)
+position = Vector2(162, 90.00001)
 scale = Vector2(0.16760787, 0.2010499)
 texture = ExtResource("9_6wip2")
 
