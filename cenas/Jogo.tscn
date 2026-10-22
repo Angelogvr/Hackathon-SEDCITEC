@@ -38,14 +38,11 @@ func _ready() -> void:
 		#pause_menu.show()
 
 func _on_gatilho_pergunta_body_entered(body: Node2D) -> void:
-	# Verifica se quem entrou na área foi realmente o nó Player
+	# Verifica se quem entrou na área foi realmente o Player
 	if body.name == \"Player\":
 		$GatilhoPergunta/CollisionShape2D.set_deferred(\"disabled\", true)
 		question_screen.show_question()
 		
-		# Opcional: Desativa a área para que a pergunta não abra 
-		# repetidamente no mesmo lugar após ser respondida:
-		# $GatilhoPergunta/CollisionShape2D.set_deferred(\"disabled\", true)
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]

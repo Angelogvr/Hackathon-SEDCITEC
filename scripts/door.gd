@@ -22,10 +22,8 @@ func _process(delta: float) -> void:
 			door.play()
 		else:
 			door.pause()
-			# Libera a passagem quando a porta estiver totalmente aberta
 			collision.disabled = true
 			
-			# Quando o jogador passar pelo meio da porta, inicia o Fade Out
 			if dist < 20:
 				start_fade_out()
 	else:
@@ -38,9 +36,8 @@ func _process(delta: float) -> void:
 func start_fade_out() -> void:
 	is_transitioning = true
 	
-	# Cria uma animação suave de 1.5 segundos mudando o Alpha (transparência) para 1.0 (totalmente preto)
 	var tween = create_tween()
-	tween.tween_property(fade_rect, "color:a", 1.0, 1.01)
+	tween.tween_property(fade_rect, "color:a", 1.0, 1.1)
 	
 	tween.finished.connect(func():
 		get_tree().change_scene_to_file("res://cenas/Creditos.tscn")

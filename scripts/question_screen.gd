@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 signal question_answered(is_correct: bool)
-signal quiz_finished(final_score: int) # Novo sinal para quando o quiz acabar
+signal quiz_finished(final_score: int) 
 
 @onready var question_label: Label = $Control/background/question_label
 @onready var btn_1: Button = $Control/background/VBoxContainer/btn_1
@@ -13,7 +13,7 @@ signal quiz_finished(final_score: int) # Novo sinal para quando o quiz acabar
 var current_question_index = 0
 var correct_answer_index = 0
 var score = 0
-var is_showing_results = false # Controla se estamos na tela final de pontuação
+var is_showing_results = false 
 
 var questions = [
 	{
@@ -46,14 +46,12 @@ func _ready():
 	btn_3.pressed.connect(func(): _on_button_pressed(2))
 	btn_4.pressed.connect(func(): _on_button_pressed(3))
 
-# Chame esta função pelo script do Jogo quando o jogador tocar na Area2D
 func show_question():
 	get_tree().paused = true 
 	current_question_index = 0
 	score = 0
 	is_showing_results = false
 	
-	# Garante que todos os botões estejam visíveis ao iniciar o quiz
 	btn_1.show()
 	btn_2.show()
 	btn_3.show()
@@ -76,7 +74,6 @@ func load_current_question():
 		show_results()
 
 func _on_button_pressed(index: int):
-	# Se já estiver na tela de pontuação, clicar no botão 1 fecha o quiz
 	if is_showing_results:
 		close_quiz()
 		return
@@ -89,7 +86,6 @@ func _on_button_pressed(index: int):
 		print("Errou! O Boss vai recuperar vida.")
 		emit_signal("question_answered", false)
 	
-	# Avança para a próxima pergunta (acertando ou errando) e atualiza a tela
 	current_question_index += 1
 	load_current_question()
 
@@ -97,7 +93,6 @@ func show_results():
 	is_showing_results = true
 	question_label.text = "Quiz finalizado!\nSua pontuação: %d de %d" % [score, questions.size()]
 	
-	# Transforma o btn_1 no botão de "Continuar" e esconde os demais
 	btn_1.text = "Continuar"
 	btn_2.hide()
 	btn_3.hide()
