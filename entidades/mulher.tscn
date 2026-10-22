@@ -69,7 +69,6 @@ animations = [{
 
 [node name="mulher" type="Node2D" unique_id=1678896781 node_paths=PackedStringArray("_hud")]
 script = ExtResource("1_opsxw")
-dialogos = null
 _hud = NodePath("Dialogo")
 
 [node name="animacao_botaoF" type="AnimatedSprite2D" parent="." unique_id=1424173791]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ba4v2u1g8fql3"
-path="res://.godot/imported/jogar_normaljpg-removebg-preview.png-c00f4cc13988035fa0db6bf188a29f0a.ctex"
+path="res://.godot/imported/jogar_normaljpg-removebg-preview.png-9344053eed6970f200e4cb12dcd51037.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Title Screen/jogar_normaljpg-removebg-preview.png"
-dest_files=["res://.godot/imported/jogar_normaljpg-removebg-preview.png-c00f4cc13988035fa0db6bf188a29f0a.ctex"]
+source_file="res://sprites/Title Screen/jogar_normaljpg-removebg-preview.png"
+dest_files=["res://.godot/imported/jogar_normaljpg-removebg-preview.png-9344053eed6970f200e4cb12dcd51037.ctex"]
 
 [params]
 

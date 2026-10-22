@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf8dcg8amprsm"
-path="res://.godot/imported/Waddling (16 x 16).png-f41d03693be0cc6a77aba61a704d3b33.ctex"
+path="res://.godot/imported/Waddling (16 x 16).png-2addbdc4b2d71453946e6ebeb8706a2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/1 - Penguin/Waddling (16 x 16).png"
-dest_files=["res://.godot/imported/Waddling (16 x 16).png-f41d03693be0cc6a77aba61a704d3b33.ctex"]
+source_file="res://sprites/1 - Penguin/Waddling (16 x 16).png"
+dest_files=["res://.godot/imported/Waddling (16 x 16).png-2addbdc4b2d71453946e6ebeb8706a2f.ctex"]
 
 [params]
 
