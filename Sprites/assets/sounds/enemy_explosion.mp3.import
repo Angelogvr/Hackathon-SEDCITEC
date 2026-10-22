@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://ciwbjvti3s7go"
-path="res://.godot/imported/enemy_explosion.mp3-f61390096684fbc44c7dcaeaf11193cb.mp3str"
+path="res://.godot/imported/enemy_explosion.mp3-fc09da320097e0f4231c767a965f71c3.mp3str"
 
 [deps]
 
-source_file="res://Sprites/assets/sounds/enemy_explosion.mp3"
-dest_files=["res://.godot/imported/enemy_explosion.mp3-f61390096684fbc44c7dcaeaf11193cb.mp3str"]
+source_file="res://sprites/assets/sounds/enemy_explosion.mp3"
+dest_files=["res://.godot/imported/enemy_explosion.mp3-fc09da320097e0f4231c767a965f71c3.mp3str"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlu6e4yy8exhn"
-path="res://.godot/imported/Group 1.png-ed0ab1b55028c8afc6825e7086837c1e.ctex"
+path="res://.godot/imported/Group 1.png-ef8c6ce4d6688b57dae11478a11d9f8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/characters/Lil Wiz/Group 1.png"
-dest_files=["res://.godot/imported/Group 1.png-ed0ab1b55028c8afc6825e7086837c1e.ctex"]
+source_file="res://sprites/assets/sprites/characters/Lil Wiz/Group 1.png"
+dest_files=["res://.godot/imported/Group 1.png-ef8c6ce4d6688b57dae11478a11d9f8c.ctex"]
 
 [params]
 

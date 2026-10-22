@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf0p55ubc622y"
-path="res://.godot/imported/bar_red.png-8f8651044e9984d096b71dac910bc9a4.ctex"
+path="res://.godot/imported/bar_red.png-98c863544cc20b3530ebfb34fcfbb4ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/assets/sprites/Mini FX, Items & UI/Mini UI/bar_red.png"
-dest_files=["res://.godot/imported/bar_red.png-8f8651044e9984d096b71dac910bc9a4.ctex"]
+source_file="res://sprites/assets/sprites/Mini FX, Items & UI/Mini UI/bar_red.png"
+dest_files=["res://.godot/imported/bar_red.png-98c863544cc20b3530ebfb34fcfbb4ee.ctex"]
 
 [params]
 

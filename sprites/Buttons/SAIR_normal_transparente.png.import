@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dmmho7loropep"
-path="res://.godot/imported/SAIR_normal_transparente.png-57a717ad5781c0eb6c2d5e3813eef91e.ctex"
+path="res://.godot/imported/SAIR_normal_transparente.png-5de407adb752a2623c8bbc849fdd1e31.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Buttons/SAIR_normal_transparente.png"
-dest_files=["res://.godot/imported/SAIR_normal_transparente.png-57a717ad5781c0eb6c2d5e3813eef91e.ctex"]
+source_file="res://sprites/Buttons/SAIR_normal_transparente.png"
+dest_files=["res://.godot/imported/SAIR_normal_transparente.png-5de407adb752a2623c8bbc849fdd1e31.ctex"]
 
 [params]
 
