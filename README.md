@@ -4,9 +4,9 @@
   Para rodar o projeto, basta instalar o pacote zip, extrair os arquivos e abrir o arquivo executável. (requer a IA Ollama para imersão completa) 
 
 ![Mulheres que Inspiram](https://github.com/Angelogvr/Hackathon-SEDCITEC/blob/main/Sprites/Title%20Screen/name-removebg-preview.png)  
-  Mulheres que Inspiram é uma plataforma gamificada desenvolvida para transformar a inspiração em uma jornada imersiva. Mais do que resgatar a história de grandes protagonistas femininas, o projeto busca despertar a admiração, acender a curiosidade e plantar a semente da inspiração em meninas estudantes.  
-  Hadassa é uma estudante que carrega no peito aquela incômoda dúvida sobre o próprio caminho profissional, sentindo que ainda não encontrou seu verdadeiro lugar no mundo. Movida pelo acaso — ou pelo destino —, ela decide visitar a exposição especial do Museu das Mulheres, um espaço dedicado a trajetórias femininas.  
-  O que era para ser uma simples visita se transforma em uma experiência extraordinária: diante de seus olhos, os quadros ganham vida, e as pioneiras retratadas passam a conversar diretamente com ela, como se estivessem ali, compartilhando suas lutas e conquistas. Fascinada, Hadassa mergulha em um diálogo profundo para descobrir as mentes brilhantes que moldaram a ciência e a tecnologia global.
+Mulheres que Inspiram é uma plataforma gamificada desenvolvida para transformar a inspiração em uma jornada imersiva. Mais do que resgatar a história de grandes protagonistas femininas, o projeto busca despertar a admiração, acender a curiosidade e plantar a semente da inspiração em meninas estudantes.  
+
+  Hadassa é uma estudante que carrega no peito aquela incômoda dúvida sobre o próprio caminho profissional, sentindo que ainda não encontrou seu verdadeiro lugar no mundo. Movida pelo acaso — ou pelo destino —, ela decide visitar a exposição especial do Museu das Mulheres, um espaço dedicado a trajetórias femininas. O que era para ser uma simples visita se transforma em uma experiência extraordinária: diante de seus olhos, os quadros ganham vida, e as pioneiras retratadas pssam a conversar diretamente com ela, como se estivessem ali, compartilhando suas lutas e conquistas. Fascinada, Hadassa mergulha em um diálogo profundo para descobrir as mentes brilhantes que moldaram a ciência e a tecnologia global.
 
 ### Controles:  
 ![Esquerda: seta esquerda ou A](https://img.shields.io/badge/Esquerda-<_ou_A-green)
