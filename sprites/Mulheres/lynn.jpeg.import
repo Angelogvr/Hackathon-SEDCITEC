@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyixhwua3041a"
-path="res://.godot/imported/marieu.png-97eca3bedf86ec62d9a31f1a08a243bd.ctex"
+uid="uid://x31p0a6w5gh4"
+path="res://.godot/imported/lynn.jpeg-fbe2b8923d5569a82d1492859d895336.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/marieu.png"
-dest_files=["res://.godot/imported/marieu.png-97eca3bedf86ec62d9a31f1a08a243bd.ctex"]
+source_file="res://sprites/Mulheres/lynn.jpeg"
+dest_files=["res://.godot/imported/lynn.jpeg-fbe2b8923d5569a82d1492859d895336.ctex"]
 
 [params]
 
