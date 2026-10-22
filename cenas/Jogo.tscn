@@ -137,20 +137,13 @@ position = Vector2(-125, 31)
 shape = SubResource("SegmentShape2D_k1af1")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Background/Colisores" unique_id=1331817857]
-position = Vector2(822, -2)
+position = Vector2(828, -2)
 shape = SubResource("SegmentShape2D_k1af1")
 
 [node name="SprCenario" type="Sprite2D" parent="Background" unique_id=577919580]
-visible = false
 position = Vector2(502.99997, 89.31249)
 scale = Vector2(0.46267837, 0.49257594)
 texture = ExtResource("1_ex3y1")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background" unique_id=816509263]
-position = Vector2(952.81256, 70.281265)
-scale = Vector2(0.36418295, 0.40465912)
-sprite_frames = SubResource("SpriteFrames_wvhbo")
-animation = &"new_animation"
 
 [node name="mulheres" type="Node2D" parent="." unique_id=376752827]
 
@@ -190,6 +183,19 @@ show_behind_parent = true
 position = Vector2(5.0000067, -28.000004)
 scale = Vector2(0.07812496, 0.06873428)
 texture = ExtResource("2_3cynk")
+
+[node name="Porta" parent="mulheres" unique_id=1663482112 instance=ExtResource("2_ex3y1")]
+position = Vector2(603, 68)
+dialogos = ["Você é Lynn Conway, uma cientista da computação, inventora e engenheira pioneira. Seu objetivo principal é conversar com uma estudante do ensino médio, contando curiosidades, descobertas revolucionárias e desafios da sua carreira para inspirá-la a seguir na ciência, na tecnologia e a acreditar no futuro.Diretrizes de comportamento:1. Responda sempre em português, com um tom caloroso, acolhedor, resiliente e inspirador (como uma mentora amorosa).2. Fale sobre suas paixões por resolver problemas complexos, sua contribuição revolucionária para o design de chips (VLSI) e como a superação de barreiras ensinou que a inteligência e a coragem podem mudar o mundo.3. Conecte sua história aos sonhos da estudante, mostrando que vale a pena persistir, mesmo diante de grandes desafios.4. Mantenha as respostas curtas e dinâmicas (no máximo 2 a 3 frases) para que o diálogo em formato de jogo flua de forma natural e cativante."]
+faceset = ["res://Sprites/lynn.jpeg"]
+tittle = ["Lynn Conway"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mulheres/Porta" unique_id=816509263]
+visible = false
+position = Vector2(349.81256, 2.2812653)
+scale = Vector2(0.36418295, 0.40465912)
+sprite_frames = SubResource("SpriteFrames_wvhbo")
+animation = &"new_animation"
 
 [node name="Player" parent="." unique_id=1744638049 instance=ExtResource("5_thifo")]
 position = Vector2(105, 126)
