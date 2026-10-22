@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bh1jgexo4tfa0" path="res://New folder/porta_anim_07.png" id="9_lav87"]
 [ext_resource type="Texture2D" uid="uid://nlgnmgrirov8" path="res://New folder/porta_anim_08.png" id="10_wxt3f"]
 [ext_resource type="AudioStream" uid="uid://b0mhf3jjpuvxf" path="res://Sprites/Sounds/16 HoliznaCC0 - Letting Go Of The Past.mp3" id="18_6cw58"]
+[ext_resource type="PackedScene" uid="uid://bmhnch0nljeul" path="res://cenas/question_screen.tscn" id="19_xk38k"]
 
 [sub_resource type="GDScript" id="GDScript_0b3n2"]
 script/source = "extends Node2D
@@ -217,3 +218,5 @@ offset_bottom = 20.0
 stream = ExtResource("18_6cw58")
 volume_db = -25.0
 autoplay = true
+
+[node name="question_screen" parent="." unique_id=513991955 instance=ExtResource("19_xk38k")]
