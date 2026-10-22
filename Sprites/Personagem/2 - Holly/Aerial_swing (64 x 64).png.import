@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://msqta81d5ks2"
-path="res://.godot/imported/Aerial_swing (64 x 64).png-e440e905941ae5630b51ec8d1e5f49ee.ctex"
+path="res://.godot/imported/Aerial_swing (64 x 64).png-98b644b7ac88971c6ffde8996179943c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Personagem/2 - Holly/Aerial_swing (64 x 64).png"
-dest_files=["res://.godot/imported/Aerial_swing (64 x 64).png-e440e905941ae5630b51ec8d1e5f49ee.ctex"]
+source_file="res://sprites/Personagem/2 - Holly/Aerial_swing (64 x 64).png"
+dest_files=["res://.godot/imported/Aerial_swing (64 x 64).png-98b644b7ac88971c6ffde8996179943c.ctex"]
 
 [params]
 

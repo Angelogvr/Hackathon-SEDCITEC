@@ -1,16 +1,17 @@
 [gd_scene format=3 uid="uid://bls2nwi65cm7k"]
 
-[ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://Sprites/spr_cenario.png" id="1_ex3y1"]
-[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://Sprites/lynn.jpeg" id="2_3cynk"]
+[ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://sprites/spr_cenario.png" id="1_ex3y1"]
+[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://sprites/lynn.jpeg" id="2_3cynk"]
 [ext_resource type="PackedScene" uid="uid://uvmflm2scmx3" path="res://entidades/mulher.tscn" id="2_ex3y1"]
 [ext_resource type="Texture2D" uid="uid://d2ycnqufde487" path="res://New folder/porta_anim_00.png" id="2_sngbk"]
-[ext_resource type="Texture2D" uid="uid://cyixhwua3041a" path="res://Sprites/marieu.png" id="3_3cynk"]
+[ext_resource type="Texture2D" uid="uid://cyixhwua3041a" path="res://sprites/marieu.png" id="3_3cynk"]
 [ext_resource type="Texture2D" uid="uid://c6e0tqyub4nuc" path="res://New folder/porta_anim_01.png" id="3_6cw58"]
-[ext_resource type="Texture2D" uid="uid://dpap03umrqtj2" path="res://Sprites/ada.png" id="4_4budo"]
+[ext_resource type="Texture2D" uid="uid://dpap03umrqtj2" path="res://sprites/ada.png" id="4_4budo"]
 [ext_resource type="Texture2D" uid="uid://foab1hgglo8d" path="res://New folder/porta_anim_02.png" id="4_xk38k"]
 [ext_resource type="PackedScene" uid="uid://c6e8gefihjl6w" path="res://entidades/camera.tscn" id="5_3cynk"]
 [ext_resource type="Texture2D" uid="uid://fekxkkb2fny6" path="res://New folder/porta_anim_03.png" id="5_b8gxm"]
 [ext_resource type="PackedScene" uid="uid://kpyrhnjd2dmb" path="res://entidades/player.tscn" id="5_thifo"]
+[ext_resource type="Script" uid="uid://cam733ujs8fbk" path="res://scripts/door.gd" id="6_6cw58"]
 [ext_resource type="Texture2D" uid="uid://dqs2hswgh0icw" path="res://New folder/porta_anim_04.png" id="6_d4u82"]
 [ext_resource type="Texture2D" uid="uid://dkxssy584txhy" path="res://New folder/porta_anim_05.png" id="7_mg164"]
 [ext_resource type="Texture2D" uid="uid://cspvi4lvvxjhq" path="res://New folder/porta_anim_06.png" id="8_8jxlo"]
@@ -83,11 +84,6 @@ region = Rect2(0, 0, 312, 550)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wvhbo"]
 animations = [{
-"frames": [],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tqyfw")
@@ -116,8 +112,8 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_2fgld")
 }],
-"loop": 1,
-"name": &"new_animation",
+"loop": 0,
+"name": &"open",
 "speed": 8.0
 }]
 
@@ -136,10 +132,6 @@ shape = SubResource("RectangleShape2D_0e48y")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Background/Colisores" unique_id=523724896]
 position = Vector2(-125, 31)
-shape = SubResource("SegmentShape2D_k1af1")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Background/Colisores" unique_id=1331817857]
-position = Vector2(828, -2)
 shape = SubResource("SegmentShape2D_k1af1")
 
 [node name="SprCenario" type="Sprite2D" parent="Background" unique_id=577919580]
@@ -186,21 +178,24 @@ position = Vector2(5.0000067, -28.000004)
 scale = Vector2(0.07812496, 0.06873428)
 texture = ExtResource("2_3cynk")
 
-[node name="Porta" parent="mulheres" unique_id=1663482112 instance=ExtResource("2_ex3y1")]
-position = Vector2(603, 68)
-dialogos = ["Você é Lynn Conway, uma cientista da computação, inventora e engenheira pioneira. Seu objetivo principal é conversar com uma estudante do ensino médio, contando curiosidades, descobertas revolucionárias e desafios da sua carreira para inspirá-la a seguir na ciência, na tecnologia e a acreditar no futuro.Diretrizes de comportamento:1. Responda sempre em português, com um tom caloroso, acolhedor, resiliente e inspirador (como uma mentora amorosa).2. Fale sobre suas paixões por resolver problemas complexos, sua contribuição revolucionária para o design de chips (VLSI) e como a superação de barreiras ensinou que a inteligência e a coragem podem mudar o mundo.3. Conecte sua história aos sonhos da estudante, mostrando que vale a pena persistir, mesmo diante de grandes desafios.4. Mantenha as respostas curtas e dinâmicas (no máximo 2 a 3 frases) para que o diálogo em formato de jogo flua de forma natural e cativante."]
-faceset = ["res://Sprites/lynn.jpeg"]
-tittle = ["Lynn Conway"]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1409729898]
+position = Vector2(953, 0)
+script = ExtResource("6_6cw58")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mulheres/Porta" unique_id=816509263]
-visible = false
-position = Vector2(349.81256, 2.2812653)
+[node name="door_animation" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=816509263]
+position = Vector2(0, 70)
 scale = Vector2(0.36418295, 0.40465912)
 sprite_frames = SubResource("SpriteFrames_wvhbo")
-animation = &"new_animation"
+animation = &"open"
+
+[node name="door_collision" type="CollisionShape2D" parent="StaticBody2D" unique_id=1331817857]
+visible = false
+position = Vector2(-136, -2)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("SegmentShape2D_k1af1")
 
 [node name="Player" parent="." unique_id=1744638049 instance=ExtResource("5_thifo")]
-position = Vector2(105, 126)
+position = Vector2(42, 122)
 
 [node name="Camera" parent="." unique_id=1173946392 instance=ExtResource("5_3cynk")]
 position = Vector2(248, 124)

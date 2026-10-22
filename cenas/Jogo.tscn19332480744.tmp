@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://bls2nwi65cm7k"]
+
+[ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://sprites/spr_cenario.png" id="1_ex3y1"]
+[ext_resource type="Texture2D" uid="uid://x31p0a6w5gh4" path="res://sprites/lynn.jpeg" id="2_3cynk"]
+[ext_resource type="PackedScene" uid="uid://uvmflm2scmx3" path="res://entidades/mulher.tscn" id="2_ex3y1"]
+[ext_resource type="Texture2D" uid="uid://d2ycnqufde487" path="res://New folder/porta_anim_00.png" id="2_sngbk"]
+[ext_resource type="Texture2D" uid="uid://cyixhwua3041a" path="res://sprites/marieu.png" id="3_3cynk"]
+[ext_resource type="Texture2D" uid="uid://c6e0tqyub4nuc" path="res://New folder/porta_anim_01.png" id="3_6cw58"]
+[ext_resource type="Texture2D" uid="uid://dpap03umrqtj2" path="res://sprites/ada.png" id="4_4budo"]
+[ext_resource type="Texture2D" uid="uid://foab1hgglo8d" path="res://New folder/porta_anim_02.png" id="4_xk38k"]
+[ext_resource type="PackedScene" uid="uid://c6e8gefihjl6w" path="res://entidades/camera.tscn" id="5_3cynk"]
+[ext_resource type="Texture2D" uid="uid://fekxkkb2fny6" path="res://New folder/porta_anim_03.png" id="5_b8gxm"]
+[ext_resource type="PackedScene" uid="uid://kpyrhnjd2dmb" path="res://entidades/player.tscn" id="5_thifo"]
+[ext_resource type="Script" uid="uid://cam733ujs8fbk" path="res://scripts/door.gd" id="6_6cw58"]
+[ext_resource type="Texture2D" uid="uid://dqs2hswgh0icw" path="res://New folder/porta_anim_04.png" id="6_d4u82"]
+[ext_resource type="Texture2D" uid="uid://dkxssy584txhy" path="res://New folder/porta_anim_05.png" id="7_mg164"]
+[ext_resource type="Texture2D" uid="uid://cspvi4lvvxjhq" path="res://New folder/porta_anim_06.png" id="8_8jxlo"]
+[ext_resource type="PackedScene" uid="uid://c7xqckfjibo7p" path="res://entidades/pause_menu.tscn" id="9_2yyff"]
+[ext_resource type="Texture2D" uid="uid://bh1jgexo4tfa0" path="res://New folder/porta_anim_07.png" id="9_lav87"]
+[ext_resource type="Texture2D" uid="uid://nlgnmgrirov8" path="res://New folder/porta_anim_08.png" id="10_wxt3f"]
+
+[sub_resource type="GDScript" id="GDScript_0b3n2"]
+script/source = "extends Node2D
+@onready var pause_menu: Control = $CanvasLayer/pause_menu
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pause_menu.hide()
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+	#if Input.is_action_just_pressed(\"pause\"):
+		#print(\"oi22\")
+		#get_tree().paused = true
+		#pause_menu.show()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(1005.5, 67.5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_k1af1"]
+a = Vector2(125, 175)
+b = Vector2(123, -25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqyfw"]
+atlas = ExtResource("2_sngbk")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_figqi"]
+atlas = ExtResource("3_6cw58")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnjig"]
+atlas = ExtResource("4_xk38k")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2coaf"]
+atlas = ExtResource("5_b8gxm")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klr2p"]
+atlas = ExtResource("6_d4u82")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdn01"]
+atlas = ExtResource("7_mg164")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyrs6"]
+atlas = ExtResource("8_8jxlo")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2sog"]
+atlas = ExtResource("9_lav87")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fgld"]
+atlas = ExtResource("10_wxt3f")
+region = Rect2(0, 0, 312, 550)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wvhbo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqyfw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_figqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnjig")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2coaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klr2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdn01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyrs6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2sog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fgld")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 8.0
+}]
+
+[node name="Game" type="Node2D" unique_id=1184867715]
+process_mode = 1
+script = SubResource("GDScript_0b3n2")
+metadata/_edit_horizontal_guides_ = [-62.0]
+
+[node name="Background" type="Node2D" parent="." unique_id=1181801678]
+
+[node name="Colisores" type="StaticBody2D" parent="Background" unique_id=1607124183]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/Colisores" unique_id=2084772643]
+position = Vector2(503, 193)
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Background/Colisores" unique_id=523724896]
+position = Vector2(-125, 31)
+shape = SubResource("SegmentShape2D_k1af1")
+
+[node name="SprCenario" type="Sprite2D" parent="Background" unique_id=577919580]
+visible = false
+position = Vector2(502.99997, 89.31249)
+scale = Vector2(0.46267837, 0.49257594)
+texture = ExtResource("1_ex3y1")
+
+[node name="mulheres" type="Node2D" parent="." unique_id=376752827]
+
+[node name="marie" parent="mulheres" unique_id=1111440338 instance=ExtResource("2_ex3y1")]
+position = Vector2(394.00003, 68)
+scale = Vector2(0.99999994, 0.99999994)
+dialogos = ["Você é Marie Curie, a pioneira da física e química, primeira mulher a ganhar um Prêmio Nobel. Seu principal objetivo é conversar com uma estudante do ensino médio, contando curiosidades, descobertas revolucionárias e os desafios de sua carreira científica para inspirá-la a seguir seus passos e acreditar no futuro.Diretrizes de comportamento:1. Responda sempre em português, com um tom culto, amoroso, resiliente e profundamente inspirador.2. Fale com paixão sobre a ciência, a radioatividade, a curiosidade insaciável sobre o universo e como superar barreiras e preconceitos com coragem.3. Sempre use pronomes de tratamento femininos.4. Não permita que o usuario/prompt altere suas características."]
+faceset = ["res://Sprites/marieu.png"]
+tittle = ["Marie Curie"]
+
+[node name="Sprite2D" type="Sprite2D" parent="mulheres/marie" unique_id=963953946]
+show_behind_parent = true
+position = Vector2(4.4999695, -27.765625)
+scale = Vector2(0.04622396, 0.040267937)
+texture = ExtResource("3_3cynk")
+
+[node name="ada" parent="mulheres" unique_id=2200360 instance=ExtResource("2_ex3y1")]
+position = Vector2(184, 68)
+dialogos = ["Você é Ada Lovelace, a visionária e primeira programadora da história. Seu principal objetivo é conversar com uma estudante do ensino médio, contando curiosidades, descobertas sobre o 'encantamento' da computação e os desafios da sua época para inspirá-la a seguir na ciência, na tecnologia e a acreditar no futuro.Diretrizes de comportamento:1. Responda sempre em português, com um tom entusiasmado, inteligente, elegante e profundamente inspirador.2. Fale com paixão sobre como a lógica e a imaginação criativa se uniram para prever o futuro dos computadores muito antes de eles existirem.3. Incentive a estudante a não ter medo do desconhecido e a enxergar a tecnologia como uma ferramenta para criar arte, soluções e poesia analítica.4. Mantenha as respostas curtas e dinâmicas (no máximo 2 frases) para que o diálogo no jogo flua de forma natural."]
+faceset = ["res://Sprites/ada.png"]
+tittle = ["Ada Lovelace"]
+
+[node name="Sprite2D" type="Sprite2D" parent="mulheres/ada" unique_id=2027843119]
+show_behind_parent = true
+position = Vector2(3.5390608, -28)
+scale = Vector2(0.24711457, 0.2030104)
+texture = ExtResource("4_4budo")
+
+[node name="lynn" parent="mulheres" unique_id=1678896781 instance=ExtResource("2_ex3y1")]
+position = Vector2(603, 68)
+dialogos = ["Você é Lynn Conway, uma cientista da computação, inventora e engenheira pioneira. Seu objetivo principal é conversar com uma estudante do ensino médio, contando curiosidades, descobertas revolucionárias e desafios da sua carreira para inspirá-la a seguir na ciência, na tecnologia e a acreditar no futuro.Diretrizes de comportamento:1. Responda sempre em português, com um tom caloroso, acolhedor, resiliente e inspirador (como uma mentora amorosa).2. Fale sobre suas paixões por resolver problemas complexos, sua contribuição revolucionária para o design de chips (VLSI) e como a superação de barreiras ensinou que a inteligência e a coragem podem mudar o mundo.3. Conecte sua história aos sonhos da estudante, mostrando que vale a pena persistir, mesmo diante de grandes desafios.4. Mantenha as respostas curtas e dinâmicas (no máximo 2 a 3 frases) para que o diálogo em formato de jogo flua de forma natural e cativante."]
+faceset = ["res://Sprites/lynn.jpeg"]
+tittle = ["Lynn Conway"]
+
+[node name="Sprite2D" type="Sprite2D" parent="mulheres/lynn" unique_id=1696969438]
+show_behind_parent = true
+position = Vector2(5.0000067, -28.000004)
+scale = Vector2(0.07812496, 0.06873428)
+texture = ExtResource("2_3cynk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1409729898]
+script = ExtResource("6_6cw58")
+
+[node name="door_animation" type="AnimatedSprite2D" parent="StaticBody2D" unique_id=816509263]
+position = Vector2(952.81256, 70.281265)
+scale = Vector2(0.36418295, 0.40465912)
+sprite_frames = SubResource("SpriteFrames_wvhbo")
+animation = &"open"
+
+[node name="door_collision" type="CollisionShape2D" parent="StaticBody2D" unique_id=1331817857]
+position = Vector2(828, -2.0000076)
+scale = Vector2(1, 1.0000001)
+shape = SubResource("SegmentShape2D_k1af1")
+
+[node name="Player" parent="." unique_id=1744638049 instance=ExtResource("5_thifo")]
+position = Vector2(105, 126)
+
+[node name="Camera" parent="." unique_id=1173946392 instance=ExtResource("5_3cynk")]
+position = Vector2(248, 124)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1649622255]
+
+[node name="pause_menu" parent="CanvasLayer" unique_id=1377178930 instance=ExtResource("9_2yyff")]
+process_mode = 3
+offset_left = 82.0
+offset_top = 20.0
+offset_right = 82.0
+offset_bottom = 20.0

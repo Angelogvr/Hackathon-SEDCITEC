@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnvsj5k0anp16"
-path="res://.godot/imported/RESUMIR_hover_transparente.png-2e9ffeff24f6dc78f5025d886f173986.ctex"
+path="res://.godot/imported/RESUMIR_hover_transparente.png-c5dfb3cc497119e5caff7c110f688177.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Buttons/RESUMIR_hover_transparente.png"
-dest_files=["res://.godot/imported/RESUMIR_hover_transparente.png-2e9ffeff24f6dc78f5025d886f173986.ctex"]
+source_file="res://sprites/Buttons/RESUMIR_hover_transparente.png"
+dest_files=["res://.godot/imported/RESUMIR_hover_transparente.png-c5dfb3cc497119e5caff7c110f688177.ctex"]
 
 [params]
 

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b8620jwenc6ds"]
 
 [ext_resource type="Script" uid="uid://geko84a121hj" path="res://scripts/creditos.gd" id="1_cpklk"]
+[ext_resource type="FontFile" uid="uid://cvo4raq6wfcqe" path="res://fonts/Minecraft.ttf" id="2_a1uo5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2ub6"]
 bg_color = Color(0.004019165, 0.004019165, 0.004019165, 1)
@@ -24,6 +25,8 @@ size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer" unique_id=117445576]
 layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_a1uo5")
+theme_override_fonts/bold_font = ExtResource("2_a1uo5")
 theme_override_font_sizes/normal_font_size = 15
 bbcode_enabled = true
 text = "[center]
