@@ -23,6 +23,3 @@ Mulheres que Inspiram é uma plataforma gamificada desenvolvida para transformar
 
 ### Tecnologias Utilizadas:  
 ![GODOT Engine](https://img.shields.io/badge/Godot%20Engine-478CBF?logo=godotengine&logoColor=fff&style=flat) ![Ollama AI](https://img.shields.io/badge/-Ollama-000000?style=flat&logo=ollama&logoColor=white) ![Itch.io](https://img.shields.io/badge/itch.io-%23FF0B34.svg?logo=Itch.io&logoColor=white)
-
-
-
