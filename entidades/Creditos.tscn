@@ -16,7 +16,6 @@ horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 script = ExtResource("1_cpklk")
 text_node = NodePath("MarginContainer/RichTextLabel")
-credits_time = 60.0
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1806299190]
 layout_mode = 2
@@ -25,49 +24,53 @@ size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer" unique_id=117445576]
 layout_mode = 2
+theme_override_font_sizes/normal_font_size = 15
 bbcode_enabled = true
-text = "			[ 1º HACKATON SEDCITEC - IFSP SPO ]
+text = "[center]
+[font_size=25][b]1º HACKATON SEDCITEC IFSP SPO[/b][/font_size]
 
 
-			GRUPO MARGARET HAMILTON
-			Sistemas de Informação - IFSP
+[font_size=20][b]GRUPO MARGARET HAMILTON[/b][/font_size]
+Sistemas de Informação - IFSP
 
 
-		--- INTEGRANTES DA EQUIPE ---
+[font_size=18][b]INTEGRANTES DA EQUIPE[/b][/font_size]
 
-			ALLYSON WELTER THOMAS LANGER
-			SP3302164
+Allyson Welter Thomas Langer
+SP3302164
 
-			ANGELO GABRIEL VIEIRA RODRIGUES
-			SP3216501
+Angelo Gabriel Vieira Rodrigues
+SP3216501
 
-			Douglas Gomes de Campos
-			SP3295435
+Douglas Gomes de Campos
+SP3295435
 
-			Sofia Hadassa Gomes Silva
-			SP3292347
-
-
-			--- ORGANIZAÇÃO E APOIO ---
-
-			Organizador do Evento
-			Igor de Moraes Sampaio
-
-			Instituição
-			Instituto Federal de Educação, Ciência e Tecnologia de São Paulo (IFSP - SPO)
+Sofia Hadassa Gomes Silva
+SP3292347
 
 
-			--- DESENVOLVIMENTO E TECNOLOGIA ---
+[font_size=18][b]ORGANIZAÇÃO E APOIO[/b][/font_size]
 
-			Arquitetura de Software ...... Sistemas de Informação
-			Inteligência Artificial ...... Ollama & Qwen 2.5
-			Motor de Jogo ................ Godot Engine
-			Linguagem de Script .......... GDScript
+[font_size=17][b]Organizador do Evento[/b][/font_size]
+Igor de Moraes Sampaio
+
+[font_size=17][b]Instituição[/b][/font_size]
+Instituto Federal de Educação, Ciência e Tecnologia de São Paulo (IFSP - SPO)
 
 
-			--- HOMENAGEM ESPECIAL ---
+[font_size=18][b]DESENVOLVIMENTO E TECNOLOGIA[/b][/font_size]
 
-			À memória de Margaret Hamilton,
-			cuja genialidade no código do programa
-			Apollo guiou a humanidade até a Lua."
+Arquitetura de Software ...... Sistemas de Informação
+Inteligência Artificial ...... Ollama & Qwen 2.5
+Motor de Jogo ................ Godot Engine
+Linguagem de Script .......... GDScript
+
+
+[font_size=18][b]HOMENAGEM ESPECIAL[/b][/font_size]
+
+À memória de Margaret Hamilton,
+cuja genialidade no código do programa
+Apollo guiou a humanidade até a Lua.
+[/center]"
 fit_content = true
+scroll_active = false

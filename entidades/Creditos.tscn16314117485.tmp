@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://b8620jwenc6ds"]
+
+[ext_resource type="Script" uid="uid://geko84a121hj" path="res://scripts/creditos.gd" id="1_cpklk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2ub6"]
+bg_color = Color(0.004019165, 0.004019165, 0.004019165, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" unique_id=2094937973 node_paths=PackedStringArray("text_node")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r2ub6")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("1_cpklk")
+text_node = NodePath("MarginContainer/RichTextLabel")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1806299190]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer" unique_id=117445576]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+text = "[center]
+[font_size=25][b]1º HACKATON SEDCITEC IFSP SPO[/b][/font_size]
+
+
+[font_size=20][b]GRUPO MARGARET HAMILTON[/b][/font_size]
+Sistemas de Informação - IFSP
+
+
+[font_size=18][b]INTEGRANTES DA EQUIPE[/b][/font_size]
+
+Allyson Welter Thomas Langer
+SP3302164
+
+Angelo Gabriel Vieira Rodrigues
+SP3216501
+
+Douglas Gomes de Campos
+SP3295435
+
+Sofia Hadassa Gomes Silva
+SP3292347
+
+
+[font_size=18][b]ORGANIZAÇÃO E APOIO[/b][/font_size]
+
+[font_size=17][b]Organizador do Evento[/b][/font_size]
+Igor de Moraes Sampaio
+
+[font_size=17][b]Instituição[/b][/font_size]
+Instituto Federal de Educação, Ciência e Tecnologia de São Paulo (IFSP - SPO)
+
+
+[font_size=18][b]DESENVOLVIMENTO E TECNOLOGIA[/b][/font_size]
+
+Arquitetura de Software ...... Sistemas de Informação
+Inteligência Artificial ...... Ollama & Qwen 2.5
+Motor de Jogo ................ Godot Engine
+Linguagem de Script .......... GDScript
+
+
+[font_size=18][b]HOMENAGEM ESPECIAL[/b][/font_size]
+
+À memória de Margaret Hamilton,
+cuja genialidade no código do programa
+Apollo guiou a humanidade até a Lua.
+[/center]"
+fit_content = true
+scroll_active = false
