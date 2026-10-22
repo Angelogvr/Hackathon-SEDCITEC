@@ -24,7 +24,7 @@ size_flags_vertical = 3
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer" unique_id=117445576]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 14
+theme_override_font_sizes/normal_font_size = 15
 bbcode_enabled = true
 text = "[center]
 [font_size=25][b]1º HACKATON SEDCITEC IFSP SPO[/b][/font_size]

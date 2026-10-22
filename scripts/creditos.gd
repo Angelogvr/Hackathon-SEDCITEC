@@ -3,6 +3,8 @@ extends ScrollContainer
 @onready var scroll_container: ScrollContainer = $"."
 @export var text_node: RichTextLabel
 
+var tween_creditos: Tween
+var velocidade_acelerada: float = 3.0
 # Tempo TOTAL da animação, em segundos
 var credits_time: float = 30
 # Espaço antes do primeiro título (0 = começa imediatamente)
@@ -12,7 +14,6 @@ var credits_time: float = 30
 
 
 func _ready() -> void:
-	print("aqui ", credits_time)
 	if not is_instance_valid(margin) or not is_instance_valid(text_node):
 		push_error("Verifique o MarginContainer e o text_node!")
 		return
@@ -55,19 +56,37 @@ func _ready() -> void:
 		return
 
 	# Cria a animação com duração controlada
-	var tween := create_tween()
-	tween.set_trans(Tween.TRANS_LINEAR)
-	tween.set_ease(Tween.EASE_IN_OUT)
+	tween_creditos = create_tween()
+	tween_creditos.set_trans(Tween.TRANS_LINEAR)
 
-	tween.tween_property(
-		self,
-		"scroll_vertical",
-		int(round(distancia_total)),
+	tween_creditos.tween_method(
+		_atualizar_rolagem,
+		0.0,
+		1.0,
 		credits_time
 	)
 
-	tween.finished.connect(_acabou)
+	tween_creditos.finished.connect(_acabou)
 
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and (event.keycode == KEY_DOWN or event.keycode == KEY_S):
+
+		if tween_creditos != null and tween_creditos.is_running():
+			if event.pressed:
+				# Segurando seta para baixo: acelera
+				tween_creditos.set_speed_scale(velocidade_acelerada)
+			else:
+				# Soltou a tecla: velocidade normal
+				tween_creditos.set_speed_scale(1.0)
+
+		# Evita que o ScrollContainer role sozinho com a tecla
+		get_viewport().set_input_as_handled()
 
 func _acabou() -> void:
 	print("Créditos concluídos!")
+	
+func _atualizar_rolagem(progresso: float) -> void:
+	var barra := get_v_scroll_bar()
+	var limite := maxf(0.0, barra.max_value - barra.page)
+
+	scroll_vertical = int(round(limite * progresso))
