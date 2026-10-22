@@ -4,7 +4,7 @@
   Para rodar o projeto, basta instalar o pacote zip, extrair os arquivos e abrir o arquivo executável. (requer a IA Ollama para imersão completa) 
 
 ### Instalar Modelo de IA:
-Baixar o modelo llama3.2.  
+Baixar o modelo [llama3.2](https://ollama.com/download).  
 Abra o Prompt de Comando e rode:  
 ollama pull llama3.2.  
 Espere o download terminar. Para conferir, abra http://localhost:11434 no navegador: deve aparecer "Ollama is running".  
