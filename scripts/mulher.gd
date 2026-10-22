@@ -21,6 +21,19 @@ var _dialogo_ativo: DialogScreen = null
 var _campo: LineEdit
 var _esperando_ia := false
 var _historico: Array = []
+enum EstadoIA {
+	PARADO,
+	CONECTANDO,
+	ESPERANDO_RESPOSTA,
+	RECEBENDO
+}
+
+var _cliente_ia: HTTPClient = null
+var _estado_ia: int = EstadoIA.PARADO
+var _corpo_ia: String = ""
+var _buffer_ia := PackedByteArray()
+var _fala_ia: String = ""
+var _limite_ia: int = 0
 
 
 func _ready() -> void:
@@ -31,6 +44,18 @@ func _ready() -> void:
 	else:
 		_PERSONAGEM = "Você é um aviso que deve avisar para o jogador tentar novamente conversar com voce. Responda sempre em português de forma curta."
 	_carregar_biografia()
+	_PERSONAGEM += """
+
+	REGRAS OBRIGATÓRIAS DE RESPOSTA:
+	- Responda sempre em português.
+	- Responda com no máximo 2 frases curtas.
+	- Cada resposta deve ter no máximo 40 palavras.
+	- Não escreva parágrafos longos.
+	- Seja direta, natural e simpática.
+- 	Não forneça explicações extensas, a menos que seja solicitado.
+- 	Se a pergunta for simples, responda com apenas uma frase.
+- 	Continue interpretando a personagem conforme sua biografia.
+"""
 	_campo = LineEdit.new()
 	_campo.placeholder_text = "Fale com o quadro e aperte Enter..."
 	_campo.custom_minimum_size = Vector2(500, 40)
@@ -43,6 +68,10 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
+	# Processa a IA enquanto esta cena estiver ativa
+	if _cliente_ia != null:
+		_atualizar_stream()
+
 	if not is_instance_valid(target):
 		return
 
@@ -58,7 +87,6 @@ func _process(_delta: float) -> void:
 
 	show_button()
 	_dialogo()
-
 
 func _dialogo() -> void:
 	var f_apertou := Input.is_action_just_pressed("interact")
@@ -115,18 +143,18 @@ func _perguntar_ia() -> void:
 	mensagens.append_array(_historico)
 
 	var corpo := {
-		"model": "llama3.2",
+		"model": "llama3.2:1b",
 		"stream": true,
 		"keep_alive": -1,
 		"messages": mensagens,
 		"options": {
-			"num_predict": 256,
-			"num_ctx": 8192,
-			"temperature": 0.6
+			"num_predict": 128,
+			"num_ctx": 2048,
+			"temperature": 0.4
 		}
 	}
 
-	# Abre a caixa de diálogo antes da resposta
+	# Abre a caixa de diálogo
 	var nova_tela: DialogScreen = _DIALOG_SCREEN.instantiate()
 
 	nova_tela.data = {
@@ -139,194 +167,29 @@ func _perguntar_ia() -> void:
 
 	_dialogo_ativo = nova_tela
 	_hud.add_child(nova_tela)
-
 	nova_tela.iniciar_stream()
 
-	# Cria conexão com Ollama
-	var cliente := HTTPClient.new()
-	cliente.blocking_mode_enabled = false
+	# Inicializa o cliente HTTP
+	_cliente_ia = HTTPClient.new()
+	_cliente_ia.blocking_mode_enabled = false
 
-	var erro: int = cliente.connect_to_host(
+	_corpo_ia = JSON.stringify(corpo)
+	_buffer_ia.clear()
+	_fala_ia = ""
+
+	_limite_ia = Time.get_ticks_msec() + 120000
+
+	var erro := _cliente_ia.connect_to_host(
 		"127.0.0.1",
 		11434
 	)
 
 	if erro != OK:
-		_erro_stream(cliente, "Falha ao conectar ao Ollama.")
+		_erro_stream("Falha ao conectar ao Ollama.")
 		return
 
-	var limite: int = Time.get_ticks_msec() + 60000
-
-	# Aguarda estabelecer conexão
-	while cliente.get_status() in [
-		HTTPClient.STATUS_RESOLVING,
-		HTTPClient.STATUS_CONNECTING
-	]:
-		if Time.get_ticks_msec() > limite:
-			_erro_stream(cliente, "Conexão demorou demais.")
-			return
-
-		erro = cliente.poll()
-
-		if erro != OK:
-			_erro_stream(cliente, "Erro na conexão HTTP.")
-			return
-
-		await get_tree().process_frame
-
-	if cliente.get_status() != HTTPClient.STATUS_CONNECTED:
-		_erro_stream(cliente, "O Ollama está indisponível.")
-		return
-
-	# Envia a pergunta
-	erro = cliente.request(
-		HTTPClient.METHOD_POST,
-		"/api/chat",
-		PackedStringArray([
-			"Content-Type: application/json",
-			"Connection: close"
-		]),
-		JSON.stringify(corpo)
-	)
-
-	if erro != OK:
-		_erro_stream(cliente, "Erro ao enviar pergunta.")
-		return
-
-	# Espera os cabeçalhos HTTP
-	while cliente.get_status() == HTTPClient.STATUS_REQUESTING:
-		if Time.get_ticks_msec() > limite:
-			_erro_stream(cliente, "O Ollama demorou demais.")
-			return
-
-		erro = cliente.poll()
-
-		if erro != OK:
-			_erro_stream(cliente, "Erro ao receber resposta.")
-			return
-
-		await get_tree().process_frame
-
-	if cliente.get_response_code() != 200:
-		_erro_stream(
-			cliente,
-			"Erro HTTP: %d" % cliente.get_response_code()
-		)
-		return
-
-	if cliente.get_status() != HTTPClient.STATUS_BODY:
-		_erro_stream(cliente, "Resposta HTTP sem corpo.")
-		return
-
-	# Recebe os fragmentos da IA
-	var buffer := PackedByteArray()
-	var fala: String = ""
-	var terminou: bool = false
-	var falha: String = ""
-
-	while cliente.get_status() == HTTPClient.STATUS_BODY:
-		if Time.get_ticks_msec() > limite:
-			falha = "Tempo de resposta esgotado."
-			break
-
-		erro = cliente.poll()
-
-		if erro != OK:
-			falha = "Erro durante o streaming."
-			break
-
-		var bloco := cliente.read_response_body_chunk()
-
-		if not bloco.is_empty():
-			buffer.append_array(bloco)
-
-			# Cada linha contém um JSON do Ollama
-			var fim: int = buffer.find(10)
-
-			while fim != -1:
-				var linha: String = buffer.slice(
-					0,
-					fim
-				).get_string_from_utf8().strip_edges()
-
-				buffer = buffer.slice(fim + 1)
-
-				if not linha.is_empty():
-					var pacote = JSON.parse_string(linha)
-
-					if pacote is Dictionary:
-						if pacote.has("error"):
-							falha = str(pacote["error"])
-							break
-
-						var mensagem = pacote.get(
-							"message",
-							{}
-						)
-
-						if mensagem is Dictionary:
-							var parte: String = str(
-								mensagem.get("content", "")
-							)
-
-							if not parte.is_empty():
-								fala += parte
-
-								# Atualiza texto em tempo real
-								if is_instance_valid(_dialogo_ativo):
-									_dialogo_ativo.atualizar_texto_stream(fala)
-
-						if pacote.get("done", false):
-							terminou = true
-							break
-
-				fim = buffer.find(10)
-
-		if terminou or not falha.is_empty():
-			break
-
-		await get_tree().process_frame
-
-	# Verifica se a resposta foi concluída
-	if not terminou or not falha.is_empty() or fala.is_empty():
-		_erro_stream(
-			cliente,
-			falha if not falha.is_empty()
-			else "O Ollama não completou a resposta."
-		)
-		return
-
-	cliente.close()
-
-	# Guarda a fala completa no histórico
-	_historico.append({
-		"role": "assistant",
-		"content": fala
-	})
-
-	_esperando_ia = false
-
-	# Libera o botão F para fechar a caixa
-	if is_instance_valid(_dialogo_ativo):
-		_dialogo_ativo.finalizar_stream()
-
-func _erro_stream(cliente: HTTPClient, mensagem: String) -> void:
-	cliente.close()
-
-	_esperando_ia = false
-
-	if not _historico.is_empty():
-		_historico.pop_back()
-
-	if is_instance_valid(_dialogo_ativo):
-		_dialogo_ativo.atualizar_texto_stream(
-			"Desculpe, não consegui responder agora."
-		)
-
-		_dialogo_ativo.finalizar_stream()
-
-	push_warning(mensagem)
-
+	_estado_ia = EstadoIA.CONECTANDO
+	
 
 func _precarregar_ia() -> void:
 	var aquecimento := HTTPRequest.new()
@@ -341,7 +204,7 @@ func _precarregar_ia() -> void:
 	)
 
 	var corpo := {
-		"model": "llama3.2",
+		"model": "llama3.2:1b",
 		"messages": [],
 		"stream": false,
 		"keep_alive": -1
@@ -360,7 +223,173 @@ func _precarregar_ia() -> void:
 	if erro != OK:
 		aquecimento.queue_free()
 
+func _atualizar_stream() -> void:
+	if _cliente_ia == null:
+		return
 
+	# Verifica o tempo limite
+	if Time.get_ticks_msec() > _limite_ia:
+		_erro_stream("Tempo de resposta esgotado.")
+		return
+
+	# Atualiza a conexão
+	var erro := _cliente_ia.poll()
+
+	if erro != OK:
+		_erro_stream("Erro na conexão HTTP.")
+		return
+
+	var status := _cliente_ia.get_status()
+
+	match _estado_ia:
+		EstadoIA.CONECTANDO:
+			if status == HTTPClient.STATUS_CONNECTED:
+				erro = _cliente_ia.request(
+					HTTPClient.METHOD_POST,
+					"/api/chat",
+					PackedStringArray([
+						"Content-Type: application/json",
+						"Connection: close"
+					]),
+					_corpo_ia
+				)
+
+				if erro != OK:
+					_erro_stream("Erro ao enviar pergunta.")
+					return
+
+				_estado_ia = EstadoIA.ESPERANDO_RESPOSTA
+
+			elif status not in [
+				HTTPClient.STATUS_RESOLVING,
+				HTTPClient.STATUS_CONNECTING
+			]:
+				_erro_stream("Não foi possível conectar ao Ollama.")
+
+		EstadoIA.ESPERANDO_RESPOSTA:
+			if status == HTTPClient.STATUS_BODY:
+				if _cliente_ia.get_response_code() != 200:
+					_erro_stream(
+						"Erro HTTP: %d" % _cliente_ia.get_response_code()
+					)
+					return
+
+				_estado_ia = EstadoIA.RECEBENDO
+				_ler_stream()
+
+			elif status != HTTPClient.STATUS_REQUESTING:
+				_erro_stream("Falha ao receber resposta HTTP.")
+
+		EstadoIA.RECEBENDO:
+			if status == HTTPClient.STATUS_BODY:
+				_ler_stream()
+
+			elif status != HTTPClient.STATUS_BODY:
+				_erro_stream("A conexão terminou antes da resposta.")
+				
+func _ler_stream() -> void:
+	if _cliente_ia == null:
+		return
+
+	var bloco := _cliente_ia.read_response_body_chunk()
+
+	if bloco.is_empty():
+		return
+
+	_buffer_ia.append_array(bloco)
+
+	var fim: int = _buffer_ia.find(10)
+
+	while fim != -1:
+		var linha: String = _buffer_ia.slice(
+			0,
+			fim
+		).get_string_from_utf8().strip_edges()
+
+		_buffer_ia = _buffer_ia.slice(fim + 1)
+
+		if not linha.is_empty():
+			var pacote = JSON.parse_string(linha)
+
+			if pacote is Dictionary:
+				if pacote.has("error"):
+					_erro_stream(str(pacote["error"]))
+					return
+
+				var mensagem = pacote.get("message", {})
+
+				if mensagem is Dictionary:
+					var parte: String = str(
+						mensagem.get("content", "")
+					)
+
+					if not parte.is_empty():
+						_fala_ia += parte
+
+						if is_instance_valid(_dialogo_ativo):
+							_dialogo_ativo.atualizar_texto_stream(
+								_fala_ia
+							)
+
+				if pacote.get("done", false):
+					if _fala_ia.is_empty():
+						_erro_stream("A IA retornou uma resposta vazia.")
+					else:
+						_finalizar_stream()
+
+					return
+
+		fim = _buffer_ia.find(10)
+		
+func _erro_stream(mensagem: String) -> void:
+	if _cliente_ia != null:
+		_cliente_ia.close()
+		_cliente_ia = null
+
+	_estado_ia = EstadoIA.PARADO
+	_esperando_ia = false
+
+	if not _historico.is_empty():
+		var ultima = _historico.back()
+
+		if ultima is Dictionary and ultima.get("role", "") == "user":
+			_historico.pop_back()
+
+	if is_instance_valid(_dialogo_ativo):
+		_dialogo_ativo.atualizar_texto_stream(
+			"Desculpe, não consegui responder agora."
+		)
+
+		_dialogo_ativo.finalizar_stream()
+
+	push_warning(mensagem)
+
+func _finalizar_stream() -> void:
+	if _cliente_ia != null:
+		_cliente_ia.close()
+		_cliente_ia = null
+
+	_estado_ia = EstadoIA.PARADO
+	_esperando_ia = false
+
+	_historico.append({
+		"role": "assistant",
+		"content": _fala_ia
+	})
+
+	if is_instance_valid(_dialogo_ativo):
+		_dialogo_ativo.finalizar_stream()
+		
+
+func _exit_tree() -> void:
+	# Cancela a conexão quando a cena é encerrada
+	if _cliente_ia != null:
+		_cliente_ia.close()
+		_cliente_ia = null
+
+	_estado_ia = EstadoIA.PARADO
+	_esperando_ia = false
+	
 func _carregar_biografia() -> void:
 	if caminho_biografia.is_empty():
 		push_warning("Nenhuma biografia configurada.")

@@ -28,7 +28,7 @@ var questions = [
 	},
 	{
 		"text": "3. Apesar dos grandes avanços promovidos por Lynn, ela não recebeu seu devido reconhecimento e foi demitida pois:",
-		"options": ["Começou sua transição de gênero", "Matou colegas de trabalho", "Roubou senhorinhas no parque", "Espalhou informações confidenciais"],
+		"options": ["Começou sua transição de gênero", "Sabotou colegas de trabalho", "Roubou senhorinhas no parque", "Espalhou informações confidenciais"],
 		"correct": 0
 	},
 	{

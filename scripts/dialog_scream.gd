@@ -2,7 +2,7 @@
 extends Control
 class_name DialogScreen
 
-var _step: float = 0.02
+var _step: float = 0.005
 var _tempo_digitar: float = 0.0
 
 var _id: int = 0

@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://bls2nwi65cm7k"]
 
-[ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://Sprites/spr_cenario.png" id="1_ex3y1"]
-[ext_resource type="Texture2D" uid="uid://dqq363p3ui46p" path="res://Sprites/Mulheres/lynn.jpeg" id="2_3cynk"]
+[ext_resource type="Texture2D" uid="uid://c57dio1l5cft7" path="res://sprites/spr_cenario.png" id="1_ex3y1"]
+[ext_resource type="Texture2D" uid="uid://dqq363p3ui46p" path="res://sprites/Mulheres/lynn.jpeg" id="2_3cynk"]
 [ext_resource type="PackedScene" uid="uid://uvmflm2scmx3" path="res://entidades/mulher.tscn" id="2_ex3y1"]
 [ext_resource type="Texture2D" uid="uid://d2ycnqufde487" path="res://New folder/porta_anim_00.png" id="2_sngbk"]
-[ext_resource type="Texture2D" uid="uid://brrukyqlcpitd" path="res://Sprites/Mulheres/marieu.png" id="3_3cynk"]
+[ext_resource type="Texture2D" uid="uid://brrukyqlcpitd" path="res://sprites/Mulheres/marieu.png" id="3_3cynk"]
 [ext_resource type="Texture2D" uid="uid://c6e0tqyub4nuc" path="res://New folder/porta_anim_01.png" id="3_6cw58"]
-[ext_resource type="Texture2D" uid="uid://c5src8utdd7xb" path="res://Sprites/Mulheres/ada.png" id="4_4budo"]
+[ext_resource type="Texture2D" uid="uid://c5src8utdd7xb" path="res://sprites/Mulheres/ada.png" id="4_4budo"]
 [ext_resource type="Texture2D" uid="uid://foab1hgglo8d" path="res://New folder/porta_anim_02.png" id="4_xk38k"]
 [ext_resource type="PackedScene" uid="uid://c6e8gefihjl6w" path="res://entidades/camera.tscn" id="5_3cynk"]
 [ext_resource type="Texture2D" uid="uid://fekxkkb2fny6" path="res://New folder/porta_anim_03.png" id="5_b8gxm"]
 [ext_resource type="PackedScene" uid="uid://kpyrhnjd2dmb" path="res://entidades/player.tscn" id="5_thifo"]
 [ext_resource type="Script" uid="uid://cam733ujs8fbk" path="res://scripts/door.gd" id="6_6cw58"]
-[ext_resource type="Texture2D" uid="uid://daugmjtoon8cy" path="res://Sprites/Mulheres/jaqueline.png" id="6_b8gxm"]
+[ext_resource type="Texture2D" uid="uid://daugmjtoon8cy" path="res://sprites/Mulheres/jaqueline.png" id="6_b8gxm"]
 [ext_resource type="Texture2D" uid="uid://dqs2hswgh0icw" path="res://New folder/porta_anim_04.png" id="6_d4u82"]
 [ext_resource type="Texture2D" uid="uid://dkxssy584txhy" path="res://New folder/porta_anim_05.png" id="7_mg164"]
 [ext_resource type="Texture2D" uid="uid://cspvi4lvvxjhq" path="res://New folder/porta_anim_06.png" id="8_8jxlo"]
@@ -195,7 +195,7 @@ texture = ExtResource("2_3cynk")
 position = Vector2(814, 68)
 dialogos = ["Responda de forma natural e educativa. Para perguntas simples, utilize respostas curtas. Para perguntas sobre sua trajetória, descobertas e conceitos científicos, forneça explicações mais detalhadas quando necessário."]
 faceset = ["res://sprites/Mulheres/jaqueline.png"]
-tittle = ["Lynn Conway"]
+tittle = ["Jaqueline Goes"]
 
 [node name="Sprite2D" type="Sprite2D" parent="mulheres/jaqueline" unique_id=747238647]
 show_behind_parent = true

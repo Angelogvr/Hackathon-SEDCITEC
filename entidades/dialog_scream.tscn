@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://cqtcjwlwwhjpr" path="res://scripts/dialog_scream.gd" id="1_8ufjh"]
 [ext_resource type="Texture2D" uid="uid://brrukyqlcpitd" path="res://sprites/Mulheres/marieu.png" id="2_8ufjh"]
 
-
-
 [sub_resource type="LabelSettings" id="LabelSettings_wvhbo"]
 shadow_color = Color(0, 0, 0, 0.6)
 
